@@ -15,12 +15,16 @@ public class LoginScreen implements Screen {
 		 * User can sign in or create a new user
 		 * Logging in as an admin navigates to the admin screen
 		 */
-		System.out.print("Enter username or type Register to sign up: ");
+                System.out.println("***************************************************");
+                System.out.println("*               ELECTRONIC BANKING                *");
+                System.out.println("***************************************************");
+                System.out.println(" ");
+		System.out.print(" Enter username or type 'Register' to sign up:   ");
 		String username = scan.nextLine();
 		if ("register".equalsIgnoreCase(username)) {
 			return new RegisterUserScreen();
 		}
-		System.out.print("Enter password: ");
+		System.out.print(" Enter password: ");
 		String password = scan.next();
 		
 		User currentUser = ud.findByUsernameAndPassword(username, password);

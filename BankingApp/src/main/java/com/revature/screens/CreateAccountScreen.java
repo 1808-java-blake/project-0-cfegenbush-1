@@ -26,27 +26,31 @@ public class CreateAccountScreen implements Screen {
 		 * User can create an account from two types of accounts
 		 */
 		Account a = new Account();
-		System.out.println("Account Options: Checking | Savings");
-		System.out.println("Enter the type of account you wish to create, or 'Exit' to return:");
-		String selection = scan.nextLine();
-		// Need to add account numbers 
-		if ("checking".equalsIgnoreCase(selection)) {
-			String checking = "checking";
-			a.setAccountType(checking);
+                System.out.println("***************************************************");
+                System.out.println("*                 CREATE ACCOUNT                  *");
+                System.out.println("***************************************************");
+                System.out.println(" ");
+		System.out.println("    Please choose an account type:");
+		System.out.println("    ");
+		System.out.println("    1: Checking");
+		System.out.println("    2: Savings");
+		System.out.println("    3: Exit");
+		String selection = scan.nextLine();switch (selection) {
+		case "1":
+			a.setAccountType("checking");
 			a.setAccountOwners(currentUser.getUsername());
 			ad.createAccount(a);
 			currentUser.setUserAccounts(a.getAccountNumber());
 			ud.updateUser(currentUser);
 			return new AccountHomeScreen(a, currentUser);
-		} else if ("savings".equalsIgnoreCase(selection)) {
-			String savings = "savings";
-			a.setAccountType(savings);
+		case "2":
+			a.setAccountType("savings");
 			a.setAccountOwners(currentUser.getUsername());
 			ad.createAccount(a);
 			currentUser.setUserAccounts(a.getAccountNumber());
 			ud.updateUser(currentUser);
 			return new AccountHomeScreen(a, currentUser);
-		} else if ("Exit".equalsIgnoreCase(selection)) {
+		case "3":
 			return new AccountOptionsScreen(currentUser);
 		}
 		return this;

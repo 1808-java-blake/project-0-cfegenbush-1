@@ -15,13 +15,13 @@ public class RegisterUserScreen implements Screen {
 		 * creates a user and stores in a .txt file
 		 */
 		User u = new User();
-		System.out.print("Enter new username:");
+		System.out.print(" Enter new username:");
 		u.setUsername(scan.nextLine());
-		System.out.print("Enter password:");
+		System.out.print(" Enter password:");
 		u.setPassword(scan.nextLine());
-		System.out.print("Enter first name:");
+		System.out.print(" Enter first name:");
 		u.setFirstName(scan.nextLine());
-		System.out.print("Enter last name:");
+		System.out.print(" Enter last name:");
 		u.setLastName(scan.nextLine());
 		
 		ud.createUser(u);

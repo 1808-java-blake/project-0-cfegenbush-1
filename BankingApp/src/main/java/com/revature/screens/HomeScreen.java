@@ -17,9 +17,17 @@ public class HomeScreen implements Screen {
 
 	@Override
 	public Screen start() {
-		System.out.println("Enter 1 for account options");
-		System.out.println("Enter 2 for user options");
-		System.out.println("Enter 3 to exit");
+                System.out.println(" ");
+                System.out.println(" ");
+                System.out.println("***************************************************");
+                System.out.println("*                     MAIN MENU                   *");
+                System.out.println("***************************************************");
+                System.out.println(" ");
+                System.out.println("    Please choose an option:");
+                System.out.println(" ");
+		System.out.println("    1: Accounts");
+		System.out.println("    2: User");
+		System.out.println("    3: Exit");
 		String selection = scan.nextLine();
 		switch (selection) {
 		case "1":

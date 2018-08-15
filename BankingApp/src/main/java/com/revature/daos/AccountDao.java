@@ -11,7 +11,7 @@ public interface AccountDao {
 	Account getAccount(int accountNumber);
 	void makeDeposit(Account a, double amountToDeposit);
 	void makeWithdrawal(Account a, double amountToWithdraw);
-	void updateAccount(Account a, User currentUser);
+	void updateAccount(Account a);
 	void deleteAccount(int accountNumber);
 
 }

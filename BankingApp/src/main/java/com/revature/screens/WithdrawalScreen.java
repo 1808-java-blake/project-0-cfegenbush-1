@@ -20,10 +20,14 @@ public class WithdrawalScreen implements Screen {
 
 	@Override
 	public Screen start() {
-		System.out.println("Enter amount to withdraw: $");
+			System.out.println("***************************************************");
+			System.out.println("*                    WITHDRAWALS                  *");
+			System.out.println("***************************************************");
+			System.out.println(" ");
+		System.out.println("   Enter Withdrawal Amount: $");
 		double amountToWithdraw = scan.nextDouble();
 		ad.makeWithdrawal(a, amountToWithdraw);
-		ad.updateAccount(a, currentUser);
+		ad.updateAccount(a);
 		return new AccountHomeScreen(a, currentUser);
 	}
 

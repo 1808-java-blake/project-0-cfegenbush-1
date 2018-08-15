@@ -77,12 +77,12 @@ public class AccountSerializer implements AccountDao {
 	}
 
 	@Override
-	public void updateAccount(Account a, User u) {
+	public void updateAccount(Account a) {
 		if (a == null) {
 			return;
 		}
 		try (ObjectOutputStream oos = new ObjectOutputStream(
-				new FileOutputStream("src/main/resources/accounts/" + u.getUsername() + a.getAccountType() + ".txt"))) {
+				new FileOutputStream("src/main/resources/accounts/" + a.getAccountNumber() + ".txt"))) {
 			oos.writeObject(a);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

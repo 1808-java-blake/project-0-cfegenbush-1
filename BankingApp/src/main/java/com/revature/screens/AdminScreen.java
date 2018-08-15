@@ -18,7 +18,11 @@ public class AdminScreen implements Screen {
 		 * Selecting an account displays the account's transaction history
 		 */
 		Account a = new Account();
-		System.out.println("Which user would you like to access?");
+		System.out.println("***************************************************");
+		System.out.println("*                      ADMIN                      *");
+		System.out.println("***************************************************");
+		System.out.println(" ");
+		System.out.println(" Which user would you like to access?");
 		File usersFolder = new File("src/main/resources/users");
 		File[] listOfUsers = usersFolder.listFiles();
 		
@@ -29,7 +33,7 @@ public class AdminScreen implements Screen {
 		}
 		String userSelection = scan.nextLine();
 		
-		System.out.println("Which account's history would you like to view?");
+		System.out.println(" Which account's history would you like to view?");
 		
 		
 		File accountsFolder = new File("src/main/resources/accounts");
@@ -40,7 +44,7 @@ public class AdminScreen implements Screen {
 				if (a.getAccountOwners().contains(userSelection)) {
 					System.out.println(a.getAccountNumber());
 				} else {
-					System.out.println("There are no accounts for that user");
+					System.out.println(" There are no accounts for that user");
 					return new AdminScreen();
 				}
 			}
@@ -48,23 +52,21 @@ public class AdminScreen implements Screen {
 		
 		int accountSelection = scan.nextInt();
 		
-		try {
+		if (listOfAccounts.toString().contains(Integer.toString(accountSelection))) {
 			a = ad.getAccount(accountSelection);
-			for (int i = 0; i < a.getTransactionHistory().size(); i++) {
-				System.out.println(a.getTransactionHistory().get(i));
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
+		}
+		for (int i = 0; i < a.getTransactionHistory().size(); i++) {
+			System.out.println(a.getTransactionHistory().get(i));
 		}
 		
 		System.out.println("Enter 1 to restart");
 		System.out.println("Enter 2 to log out");
 		String exit = scan.nextLine();
-		if ("1".equals(exit)) { 
-			return new AdminScreen();
-		} else if ("2".equals(exit)) { 
-			return new LoginScreen(); 
+		
+		if ("2".equals(exit)) { 
+			return new LoginScreen();
+		} else {
+		return this;
 		}
-		return null;
 	}
 }

@@ -22,10 +22,14 @@ public class DepositScreen implements Screen {
 
 	@Override
 	public Screen start() {
-		System.out.println("Enter amount to deposit: $");
+                System.out.println("***************************************************");
+                System.out.println("*                     DEPOSITS                    *");
+                System.out.println("***************************************************");
+                System.out.println(" ");
+		System.out.println("   Enter Deposit Amount: $");
 		double amountToDeposit = scan.nextDouble();
 		ad.makeDeposit(a, amountToDeposit);
-		ad.updateAccount(a, currentUser);
+		ad.updateAccount(a);
 		return new AccountHomeScreen(a, currentUser);
 	}
 

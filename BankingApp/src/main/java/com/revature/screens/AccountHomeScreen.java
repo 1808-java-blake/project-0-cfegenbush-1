@@ -21,14 +21,19 @@ public class AccountHomeScreen implements Screen {
 		/*
 		 * 
 		 */
-		System.out.println("Please choose from the following options: ");
-		System.out.println("Enter 1 to make a deposit");
-		System.out.println("Enter 2 to make a withdrawal");
-		System.out.println("Enter 3 to view account balance");
-		System.out.println("Enter 4 to view transaction history");
-		System.out.println("Enter 5 to wire funds to an account");
-		System.out.println("Enter 6 to share this account with another user");
-		System.out.println("Enter 7 to return to the previous screen");
+                System.out.println("***************************************************");
+                System.out.println("*                    ACCOUNT                      *");
+                System.out.println("***************************************************");
+                System.out.println(" ");
+		System.out.println("  Please choose an option: ");
+                System.out.println(" ");
+		System.out.println("  1: Deposit ");
+		System.out.println("  2: Withdrawal  ");
+		System.out.println("  3: Balance Inquiry ");
+		System.out.println("  4: Transaction History ");
+		System.out.println("  5: Wire Funds ");
+		System.out.println("  6: Add Account Owner ");
+		System.out.println("  7: Previous Screen ");
 		String selection = scan.nextLine();
 		switch (selection) {
 		case "1":
@@ -47,6 +52,10 @@ public class AccountHomeScreen implements Screen {
 				System.out.println(a.getTransactionHistory().get(i));
 			}
 			break;
+		case "5":
+			return new WireFundsScreen(a, currentUser);
+		case "6":
+			return new AddAccountOwnerScreen(a, currentUser);
 		case "7":
 			return new AccountOptionsScreen(currentUser);
 		}

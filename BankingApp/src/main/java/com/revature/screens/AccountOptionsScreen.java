@@ -22,11 +22,16 @@ public class AccountOptionsScreen implements Screen {
 		 * User can select an account from a list of their accounts - assuming they have at least one
 		 * User can create or delete an account
 		 */
-		System.out.println("Please choose from the following options:");
-		System.out.println("Enter 1 to select an account to access");
-		System.out.println("Enter 2 to create an account");
-		System.out.println("Enter 3 to delete an account");
-		System.out.println("Enter 4 to return to the previous screen");
+                System.out.println("***************************************************");
+                System.out.println("*                 ACCOUNT OPTIONS                 *");
+                System.out.println("***************************************************");
+                System.out.println(" ");
+		System.out.println("   Please choose an option:");
+                System.out.println(" ");
+		System.out.println("   1: Select Account");
+		System.out.println("   2: Create Account");
+		System.out.println("   3: Delete Account");
+		System.out.println("   4: Return to the previous screen");
 		String selection = scan.nextLine();
 		switch (selection) {
 		case "1":
@@ -36,7 +41,7 @@ public class AccountOptionsScreen implements Screen {
 				for (int userAccount: currentUser.getUserAccounts()) {
 					a = ad.getAccount(userAccount);
 					System.out.printf("%s - %s", userAccount, a.getAccountType());
-					System.out.println("\n");
+					System.out.println(" ");
 				}
 				
 				int selectedAccount = scan.nextInt();
