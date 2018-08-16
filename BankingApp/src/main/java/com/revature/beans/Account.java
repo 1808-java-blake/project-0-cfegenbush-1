@@ -67,6 +67,10 @@ public class Account implements Serializable {
 	public int getAccountNumber() {
 		return accountNumber;
 	}
+	
+	public void setAccountNumber() {
+		accountNumber++;
+	}
 
 	@Override
 	public int hashCode() {

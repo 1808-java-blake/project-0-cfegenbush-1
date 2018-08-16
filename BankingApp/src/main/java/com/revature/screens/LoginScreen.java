@@ -24,7 +24,7 @@ public class LoginScreen implements Screen {
 		if ("register".equalsIgnoreCase(username)) {
 			return new RegisterUserScreen();
 		}
-		System.out.print(" Enter password: ");
+		System.out.print(" Enter password:   ");
 		String password = scan.next();
 		
 		User currentUser = ud.findByUsernameAndPassword(username, password);

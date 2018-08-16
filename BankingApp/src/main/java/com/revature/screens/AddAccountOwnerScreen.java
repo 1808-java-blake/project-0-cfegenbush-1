@@ -1,6 +1,7 @@
 package main.java.com.revature.screens;
 
 import java.io.File;
+import java.util.Arrays;
 import java.util.Scanner;
 
 import main.java.com.revature.beans.Account;
@@ -32,16 +33,16 @@ public class AddAccountOwnerScreen implements Screen {
 		System.out.println("*                  SHARE ACCOUNT                  *");
 		System.out.println("***************************************************");
 		System.out.println(" ");
-		System.out.println(" Enter the username of the new account owner:");
+		System.out.print(" Enter the username of the new account owner:   ");
 		String username = scan.nextLine();
-		System.out.println(" Enter the password of the new account owner:");
+		System.out.print(" Enter the password of the new account owner:   ");
 		String password = scan.next();
 		
 		User newAccountOwner = ud.findByUsernameAndPassword(username, password);	
 		
 		File usersFolder = new File("src/main/resources/users");
 		String[] listOfUsers = usersFolder.list();
-		if (listOfUsers.toString().contains(username)) {
+		if (Arrays.toString(listOfUsers).replaceAll(".txt", "").contains(username)) {
 			a.setAccountOwners(username);
 			ad.updateAccount(a);
 			newAccountOwner.setUserAccounts(a.getAccountNumber());

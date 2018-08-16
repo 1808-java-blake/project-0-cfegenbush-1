@@ -1,6 +1,7 @@
 package main.java.com.revature.screens;
 
 import java.io.File;
+import java.util.Arrays;
 import java.util.Scanner;
 
 import main.java.com.revature.beans.Account;
@@ -24,11 +25,11 @@ public class AdminScreen implements Screen {
 		System.out.println(" ");
 		System.out.println(" Which user would you like to access?");
 		File usersFolder = new File("src/main/resources/users");
-		File[] listOfUsers = usersFolder.listFiles();
+		String[] listOfUsers = usersFolder.list();
 		
 		for (int i = 0; i < listOfUsers.length; i++) {
-			if (listOfUsers[i].isFile() && !"admin.txt".equals(listOfUsers[i].getName())) {
-				System.out.println(listOfUsers[i].getName().replaceAll(".txt", ""));
+			if (!"admin.txt".equals(listOfUsers[i])) {
+				System.out.println(listOfUsers[i].replaceAll(".txt", ""));
 			}
 		}
 		String userSelection = scan.nextLine();
@@ -37,23 +38,24 @@ public class AdminScreen implements Screen {
 		
 		
 		File accountsFolder = new File("src/main/resources/accounts");
-		File[] listOfAccounts = accountsFolder.listFiles();
+		String[] listOfAccounts = accountsFolder.list();
 		for (int i = 0; i < listOfAccounts.length; i++) {
-			if (listOfAccounts[i].isFile()) {
-				a = ad.getAccount(Integer.parseInt(listOfAccounts[i].getName().replaceAll(".txt", "")));
-				if (a.getAccountOwners().contains(userSelection)) {
-					System.out.println(a.getAccountNumber());
-				} else {
-					System.out.println(" There are no accounts for that user");
-					return new AdminScreen();
-				}
+			a = ad.getAccount(Integer.parseInt(listOfAccounts[i].replaceAll(".txt", "")));
+			if (a.getAccountOwners().contains(userSelection)) {
+				System.out.println(a.getAccountNumber());
+			} else {
+				System.out.println(" There are no accounts for that user");
+				return new AdminScreen();
 			}
 		}
 		
 		int accountSelection = scan.nextInt();
 		
-		if (listOfAccounts.toString().contains(Integer.toString(accountSelection))) {
+		if (Arrays.toString(listOfAccounts).replaceAll(".txt", "").contains(Integer.toString(accountSelection))) {
 			a = ad.getAccount(accountSelection);
+		} else {
+			System.out.println(" Incorrect account number.");
+			return new AdminScreen();
 		}
 		for (int i = 0; i < a.getTransactionHistory().size(); i++) {
 			System.out.println(a.getTransactionHistory().get(i));

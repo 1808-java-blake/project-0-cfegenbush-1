@@ -7,7 +7,7 @@ public interface UserDao {
 	public static final UserDao currentUserDao = new UserSerializer();
 	
 	void createUser(User u);
-	User findByUsernameAndPassword(String username, String password);
+	User findByUsernameAndPassword(String username, String password); // throws User does not exist exception
 	void updateUser(User u);
 	void deleteUser(User u);
 	

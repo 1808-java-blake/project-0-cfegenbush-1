@@ -20,7 +20,7 @@ public class HomeScreen implements Screen {
                 System.out.println(" ");
                 System.out.println(" ");
                 System.out.println("***************************************************");
-                System.out.println("*                     MAIN MENU                   *");
+                System.out.println("*                   MAIN MENU                     *");
                 System.out.println("***************************************************");
                 System.out.println(" ");
                 System.out.println("    Please choose an option:");

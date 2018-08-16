@@ -10,7 +10,7 @@ public interface AccountDao {
 	void createAccount(Account a);
 	Account getAccount(int accountNumber);
 	void makeDeposit(Account a, double amountToDeposit);
-	void makeWithdrawal(Account a, double amountToWithdraw);
+	void makeWithdrawal(Account a, double amountToWithdraw); // throws insufficient funds exception
 	void updateAccount(Account a);
 	void deleteAccount(int accountNumber);
 

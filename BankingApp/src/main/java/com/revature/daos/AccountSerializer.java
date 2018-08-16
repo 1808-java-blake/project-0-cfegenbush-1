@@ -22,6 +22,9 @@ public class AccountSerializer implements AccountDao {
 		}
 		File f = new File("src/main/resources/accounts/" + a.getAccountNumber() + ".txt");
 		if (f.exists()) {
+			
+			a.setAccountNumber();
+			AccountDao.currentAccountDao.createAccount(a);
 			return;
 		}
 		try {

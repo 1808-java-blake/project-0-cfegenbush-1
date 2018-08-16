@@ -1,6 +1,7 @@
 package main.java.com.revature.screens;
 
 import java.io.File;
+import java.util.Arrays;
 import java.util.Scanner;
 
 import main.java.com.revature.beans.Account;
@@ -25,13 +26,13 @@ public class WireFundsScreen implements Screen {
 		System.out.println("*                    WIRE FUNDS                   *");
 		System.out.println("***************************************************");
 		System.out.println(" ");
-		System.out.println(" Enter the account number  ");
+		System.out.print(" Enter the account number:  ");
 		String accountNumber = scan.nextLine();
 		
 		File accountsFolder = new File("src/main/resources/accounts");
 		String[] listOfAccounts = accountsFolder.list();
-		if (listOfAccounts.toString().contains(accountNumber)) {
-			System.out.println(" Enter the amount to transfer: $ ");
+		if (Arrays.toString(listOfAccounts).replaceAll(".txt", "").contains(accountNumber)) {
+			System.out.print(" Enter the amount to transfer: $ ");
 			int amount = scan.nextInt();
 			ad.makeWithdrawal(a, amount);
 			ad.updateAccount(a);
@@ -39,6 +40,9 @@ public class WireFundsScreen implements Screen {
 			targetAccount = ad.getAccount(Integer.parseInt(accountNumber));
 			ad.makeDeposit(targetAccount, amount);
 			ad.updateAccount(targetAccount);
+		} else {
+			System.out.println("Account does not exist. Please try again.");
+			return this;
 		}
 		
 		return new AccountHomeScreen(a, currentUser);

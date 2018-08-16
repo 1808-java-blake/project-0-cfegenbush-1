@@ -37,10 +37,10 @@ public class AccountOptionsScreen implements Screen {
 		case "1":
 			if (currentUser.getUserAccounts().size() != 0) {
 				Account a = new Account();
-				System.out.println("Account(s): ");
+				System.out.println("   Account(s): ");
 				for (int userAccount: currentUser.getUserAccounts()) {
 					a = ad.getAccount(userAccount);
-					System.out.printf("%s - %s", userAccount, a.getAccountType());
+					System.out.printf("   %s - %s", userAccount, a.getAccountType());
 					System.out.println(" ");
 				}
 				
@@ -49,18 +49,20 @@ public class AccountOptionsScreen implements Screen {
 					a = ad.getAccount(selectedAccount);
 					return new AccountHomeScreen(a, currentUser);
 				}
+				System.out.println("   Incorrect Account Number. Please try again");
+				return this;
 			} 
-			System.out.println("No accounts available. Create an account.");
+			System.out.println("   No accounts available. Create an account.");
 			return this;
 		case "2":
 			return new CreateAccountScreen(currentUser);
 		case "3":
 			if (currentUser.getUserAccounts().size() != 0) {
 				Account a = new Account();
-				System.out.println("Select account to delete: ");
+				System.out.println("   Select account to delete: ");
 				for (int userAccount: currentUser.getUserAccounts()) {
 					a = ad.getAccount(userAccount);
-					System.out.printf("%s - %s", userAccount, a.getAccountType());
+					System.out.printf("   %s - %s", userAccount, a.getAccountType());
 				}
 				
 				int selectedAccount = scan.nextInt();
@@ -68,8 +70,10 @@ public class AccountOptionsScreen implements Screen {
 					ad.deleteAccount(selectedAccount);
 					return new LoginScreen();
 				}
+				System.out.println("Incorrect account number. Please try again");
+				return this;
 			}
-			System.out.println("No accounts to delete");
+			System.out.println("   No accounts to delete");
 			break;
 		case "4":
 			return new HomeScreen(currentUser);
