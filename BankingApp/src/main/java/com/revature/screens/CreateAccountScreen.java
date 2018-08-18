@@ -2,56 +2,58 @@ package main.java.com.revature.screens;
 
 import java.util.Scanner;
 
+import org.apache.log4j.Logger;
+
 import main.java.com.revature.beans.Account;
 import main.java.com.revature.beans.User;
 import main.java.com.revature.daos.AccountDao;
-import main.java.com.revature.daos.UserDao;
+import main.java.com.revature.util.AppState;
 
 public class CreateAccountScreen implements Screen {
 	private Scanner scan = new Scanner(System.in);
 	private AccountDao ad = AccountDao.currentAccountDao;
-	private UserDao ud = UserDao.currentUserDao;
-	private User currentUser;
-	
-	
-
-	public CreateAccountScreen(User currentUser) {
-		super();
-		this.currentUser = currentUser;
-	}
+	private User currentUser = AppState.state.getCurrentUser();
+	private AppState state = AppState.state;
+	private Logger log = Logger.getRootLogger();
 
 	@Override
 	public Screen start() {
 		/*
 		 * User can create an account from two types of accounts
 		 */
+		log.debug("started create account screen");
 		Account a = new Account();
-                System.out.println("***************************************************");
-                System.out.println("*                 CREATE ACCOUNT                  *");
-                System.out.println("***************************************************");
-                System.out.println(" ");
+		System.out.println("***************************************************");
+		System.out.println("*                 CREATE ACCOUNT                  *");
+		System.out.println("***************************************************");
+		System.out.println(" ");
 		System.out.println("    Please choose an account type:");
 		System.out.println("    ");
 		System.out.println("    1: Checking");
 		System.out.println("    2: Savings");
 		System.out.println("    3: Exit");
-		String selection = scan.nextLine();switch (selection) {
+		String selection = scan.nextLine();
+		switch (selection) {
 		case "1":
+			a.setNewAccountNumber();
 			a.setAccountType("checking");
-			a.setAccountOwners(currentUser.getUsername());
+			a.setBalance(0.00);
 			ad.createAccount(a);
-			currentUser.setUserAccounts(a.getAccountNumber());
-			ud.updateUser(currentUser);
-			return new AccountHomeScreen(a, currentUser);
+			log.debug("Created account: " + a.toString());
+			state.setCurrentAccount(a);
+			ad.addAccountOwner(a.getAccountNumber(), currentUser.getUsername());
+			return new AccountHomeScreen();
 		case "2":
+			a.setNewAccountNumber();
 			a.setAccountType("savings");
-			a.setAccountOwners(currentUser.getUsername());
+			a.setBalance(0.00);
 			ad.createAccount(a);
-			currentUser.setUserAccounts(a.getAccountNumber());
-			ud.updateUser(currentUser);
-			return new AccountHomeScreen(a, currentUser);
+			log.debug("Created account: " + a.toString());
+			state.setCurrentAccount(a);
+			ad.addAccountOwner(a.getAccountNumber(), currentUser.getUsername());
+			return new AccountHomeScreen();
 		case "3":
-			return new AccountOptionsScreen(currentUser);
+			return new AccountOptionsScreen();
 		}
 		return this;
 	}

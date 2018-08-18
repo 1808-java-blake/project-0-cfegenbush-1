@@ -2,33 +2,30 @@ package main.java.com.revature.screens;
 
 import java.util.Scanner;
 
+import org.apache.log4j.Logger;
+
 import main.java.com.revature.beans.Account;
-import main.java.com.revature.beans.User;
 import main.java.com.revature.daos.AccountDao;
+import main.java.com.revature.util.AppState;
 
 public class WithdrawalScreen implements Screen {
-	Scanner scan = new Scanner(System.in);
+	private Scanner scan = new Scanner(System.in);
 	private AccountDao ad = AccountDao.currentAccountDao;
-	private Account a;
-	private User currentUser;
-
-	public WithdrawalScreen(Account a, User currentUser) {
-		super();
-		this.a = a;
-		this.currentUser = currentUser;
-	}
+	private Account currentAccount = AppState.state.getCurrentAccount();
+	private Logger log = Logger.getRootLogger();
 
 	@Override
 	public Screen start() {
-			System.out.println("***************************************************");
-			System.out.println("*                    WITHDRAWALS                  *");
-			System.out.println("***************************************************");
-			System.out.println(" ");
+		log.debug("started withdrawal screen");
+		System.out.println("***************************************************");
+		System.out.println("*                    WITHDRAWALS                  *");
+		System.out.println("***************************************************");
+		System.out.println(" ");
 		System.out.println("   Enter Withdrawal Amount: $");
 		double amountToWithdraw = scan.nextDouble();
-		ad.makeWithdrawal(a, amountToWithdraw);
-		ad.updateAccount(a);
-		return new AccountHomeScreen(a, currentUser);
+		ad.makeWithdrawal(currentAccount, amountToWithdraw);
+		ad.addTransaction(currentAccount, currentAccount, "Withdrawal", amountToWithdraw);
+		return new AccountHomeScreen();
 	}
 
 }

@@ -1,20 +1,18 @@
 package main.java.com.revature.beans;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 
-public class User implements Serializable {
-	
+public class User {
+
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -7166456503604515786L;
 	private String username;
 	private String password;
 	private String firstName;
 	private String lastName;
 	private ArrayList<Integer> userAccounts = new ArrayList<Integer>();
-	
+
 	public User() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -114,7 +112,5 @@ public class User implements Serializable {
 		return "User [username=" + username + ", password=" + password + ", firstName=" + firstName + ", lastName="
 				+ lastName + ", userAccounts=" + userAccounts + "]";
 	}
-	
-	
 
 }

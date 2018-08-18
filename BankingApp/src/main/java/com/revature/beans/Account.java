@@ -1,33 +1,27 @@
 package main.java.com.revature.beans;
 
-import java.io.Serializable;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Account implements Serializable {
+public class Account {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 2665218185511112855L;
 	private List<String> accountOwners;
 	private List<String> transactionHistory;
 	private String accountType;
 	private int accountNumber;
 	private double balance;
 	public static int nextAccountNumber = 1000;
-	
-	
+
 	public Account() {
 		super();
 		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 		String creationString = timeStamp + " - Account Created";
-		this.accountOwners = new ArrayList<String>();
-		this.accountOwners.add("admin");
 		this.transactionHistory = new ArrayList<String>();
 		this.transactionHistory.add(creationString);
-		this.balance = 0.00;
 		this.accountNumber = ++nextAccountNumber;
 	}
 
@@ -47,15 +41,6 @@ public class Account implements Serializable {
 		this.balance = balance;
 	}
 
-	public List<String> getAccountOwners() {
-		return accountOwners;
-	}
-
-	public void setAccountOwners(String username) {
-		this.accountOwners.add(username);
-	}
-	
-
 	public List<String> getTransactionHistory() {
 		return transactionHistory;
 	}
@@ -63,12 +48,16 @@ public class Account implements Serializable {
 	public void setTransactionHistory(String transaction) {
 		this.transactionHistory.add(transaction);
 	}
-	
+
 	public int getAccountNumber() {
 		return accountNumber;
 	}
-	
-	public void setAccountNumber() {
+
+	public void setAccountNumber(int accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+
+	public void setNewAccountNumber() {
 		accountNumber++;
 	}
 
@@ -122,7 +111,5 @@ public class Account implements Serializable {
 		return "Account [accountOwners=" + accountOwners + ", transactionHistory=" + transactionHistory
 				+ ", accountType=" + accountType + ", accountNumber=" + accountNumber + ", balance=" + balance + "]";
 	}
-	
-	
 
 }

@@ -1,82 +1,69 @@
 package main.java.com.revature.screens;
 
+import java.util.List;
 import java.util.Scanner;
+
+import org.apache.log4j.Logger;
 
 import main.java.com.revature.beans.Account;
 import main.java.com.revature.beans.User;
 import main.java.com.revature.daos.AccountDao;
+import main.java.com.revature.daos.UserDao;
+import main.java.com.revature.util.AppState;
 
 public class AccountOptionsScreen implements Screen {
 	private Scanner scan = new Scanner(System.in);
-	private User currentUser;
 	private AccountDao ad = AccountDao.currentAccountDao;
-
-	public AccountOptionsScreen(User currentUser) {
-		super();
-		this.currentUser = currentUser;
-	}
+	private UserDao ud = UserDao.currentUserDao;
+	private AppState state = AppState.state;
+	private User currentUser = AppState.state.getCurrentUser();
+	private Logger log = Logger.getRootLogger();
 
 	@Override
 	public Screen start() {
 		/*
-		 * User can select an account from a list of their accounts - assuming they have at least one
-		 * User can create or delete an account
+		 * User can select an account from a list of their accounts - assuming they have
+		 * at least one User can create or delete an account
 		 */
-                System.out.println("***************************************************");
-                System.out.println("*                 ACCOUNT OPTIONS                 *");
-                System.out.println("***************************************************");
-                System.out.println(" ");
+		log.debug("started account options screen");
+		System.out.println("***************************************************");
+		System.out.println("*                 ACCOUNT OPTIONS                 *");
+		System.out.println("***************************************************");
+		System.out.println(" ");
 		System.out.println("   Please choose an option:");
-                System.out.println(" ");
+		System.out.println(" ");
 		System.out.println("   1: Select Account");
 		System.out.println("   2: Create Account");
-		System.out.println("   3: Delete Account");
-		System.out.println("   4: Return to the previous screen");
+		System.out.println("   3: Return to the previous screen");
 		String selection = scan.nextLine();
 		switch (selection) {
 		case "1":
-			if (currentUser.getUserAccounts().size() != 0) {
-				Account a = new Account();
+			List<Integer> userAccounts = ud.getUserAccounts(currentUser.getUsername());
+			if (userAccounts.size() != 0) {
 				System.out.println("   Account(s): ");
-				for (int userAccount: currentUser.getUserAccounts()) {
-					a = ad.getAccount(userAccount);
+				userAccounts.stream().forEach((userAccount) -> {
+					Account a = ad.getAccount(userAccount);
 					System.out.printf("   %s - %s", userAccount, a.getAccountType());
 					System.out.println(" ");
-				}
-				
+				});
+
+				log.trace("retrieved user accounts");
+
 				int selectedAccount = scan.nextInt();
-				if (currentUser.getUserAccounts().contains(selectedAccount)) {
-					a = ad.getAccount(selectedAccount);
-					return new AccountHomeScreen(a, currentUser);
+				if (userAccounts.contains(selectedAccount)) {
+					state.setCurrentAccount(ad.getAccount(selectedAccount));
+					log.debug("selected account: " + state.getCurrentAccount());
+					return new AccountHomeScreen();
 				}
 				System.out.println("   Incorrect Account Number. Please try again");
 				return this;
-			} 
+			}
 			System.out.println("   No accounts available. Create an account.");
 			return this;
 		case "2":
-			return new CreateAccountScreen(currentUser);
+			return new CreateAccountScreen();
 		case "3":
-			if (currentUser.getUserAccounts().size() != 0) {
-				Account a = new Account();
-				System.out.println("   Select account to delete: ");
-				for (int userAccount: currentUser.getUserAccounts()) {
-					a = ad.getAccount(userAccount);
-					System.out.printf("   %s - %s", userAccount, a.getAccountType());
-				}
-				
-				int selectedAccount = scan.nextInt();
-				if (currentUser.getUserAccounts().contains(selectedAccount)) {
-					ad.deleteAccount(selectedAccount);
-					return new LoginScreen();
-				}
-				System.out.println("Incorrect account number. Please try again");
-				return this;
-			}
-			System.out.println("   No accounts to delete");
-			break;
-		case "4":
-			return new HomeScreen(currentUser);
+			return new HomeScreen();
 		}
 		return this;
 	}

@@ -3,11 +3,11 @@ CREATE TABLE Users (
     Password VARCHAR(20) NOT NULL,
     FirstName VARCHAR(20) NOT NULL,
     LastName VARCHAR(20) NOT NULL,
-    Admin   BINARY NOT NULL
+    Admin INTEGER NOT NULL
 );
 
 CREATE TABLE Accounts (
-    AccountNumber SERIAL PRIMARY KEY,
+    AccountNumber INTEGER PRIMARY KEY,
     AccountType VARCHAR(10) NOT NULL,
     Balance NUMERIC(10,2),
     CreationDate TIMESTAMP
@@ -19,11 +19,11 @@ CREATE TABLE Transactions (
     Amount NUMERIC(10,2) NOT NULL,
     Date TIMESTAMP NOT NULL,
     AccountTransferredTo INTEGER,
-    AccountID INTEGER REFERENCES Account(AccountNumber)
+    AccountID INTEGER REFERENCES Accounts(AccountNumber) ON DELETE CASCADE
 );
 
 CREATE TABLE AccountOwners (
-    Username VARCHAR(20) REFERENCES Users(Username),
-    AccountID INTEGER REFERENCES Account(AccountNumber)
+    Username VARCHAR(20) REFERENCES Users(Username) ON DELETE CASCADE,
+    AccountID INTEGER REFERENCES Accounts(AccountNumber) ON DELETE CASCADE,
     PRIMARY KEY(Username, AccountID) 
 );

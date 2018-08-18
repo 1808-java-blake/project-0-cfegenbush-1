@@ -1,0 +1,442 @@
+2018-08-16 16:32:08 TRACE Launcher:12 - trace log
+2018-08-16 16:32:08 DEBUG Launcher:13 - debug log
+2018-08-16 16:32:08 INFO  Launcher:14 - info log
+2018-08-16 16:32:08 WARN  Launcher:15 - warn log
+2018-08-16 16:32:08 ERROR Launcher:16 - error log
+2018-08-16 16:32:08 FATAL Launcher:17 - fatal log
+2018-08-16 16:32:14 WARN  UserDaoJdbc:37 - failed to find user
+2018-08-16 16:32:36 WARN  UserDaoJdbc:37 - failed to find user
+2018-08-16 16:32:39 WARN  UserDaoJdbc:37 - failed to find user
+2018-08-16 16:33:21 TRACE Launcher:12 - trace log
+2018-08-16 16:33:21 DEBUG Launcher:13 - debug log
+2018-08-16 16:33:21 INFO  Launcher:14 - info log
+2018-08-16 16:33:21 WARN  Launcher:15 - warn log
+2018-08-16 16:33:21 ERROR Launcher:16 - error log
+2018-08-16 16:33:21 FATAL Launcher:17 - fatal log
+2018-08-16 16:33:42 WARN  UserDaoJdbc:37 - failed to find user
+2018-08-16 16:33:49 TRACE Launcher:12 - trace log
+2018-08-16 16:33:49 DEBUG Launcher:13 - debug log
+2018-08-16 16:33:49 INFO  Launcher:14 - info log
+2018-08-16 16:33:49 WARN  Launcher:15 - warn log
+2018-08-16 16:33:49 ERROR Launcher:16 - error log
+2018-08-16 16:33:49 FATAL Launcher:17 - fatal log
+2018-08-16 16:33:54 WARN  UserDaoJdbc:37 - failed to find user
+2018-08-16 16:36:03 TRACE Launcher:12 - trace log
+2018-08-16 16:36:03 DEBUG Launcher:13 - debug log
+2018-08-16 16:36:03 INFO  Launcher:14 - info log
+2018-08-16 16:36:03 WARN  Launcher:15 - warn log
+2018-08-16 16:36:03 ERROR Launcher:16 - error log
+2018-08-16 16:36:03 FATAL Launcher:17 - fatal log
+2018-08-16 19:43:08 TRACE Launcher:12 - trace log
+2018-08-16 19:43:08 DEBUG Launcher:13 - debug log
+2018-08-16 19:43:08 INFO  Launcher:14 - info log
+2018-08-16 19:43:08 WARN  Launcher:15 - warn log
+2018-08-16 19:43:08 ERROR Launcher:16 - error log
+2018-08-16 19:43:08 FATAL Launcher:17 - fatal log
+2018-08-16 19:43:08 DEBUG LoginScreen:17 - started login screen
+2018-08-16 19:43:13 TRACE LoginScreen:28 - username = test
+2018-08-16 19:43:15 DEBUG LoginScreen:35 - received users credentials
+2018-08-16 19:43:15 INFO  LoginScreen:39 - User logged in successfully
+2018-08-16 19:43:15 INFO  LoginScreen:43 - WelcomeUser [username=test, password=null, firstName=test, lastName=test, userAccounts=[]]
+2018-08-16 20:43:01 TRACE Launcher:12 - trace log
+2018-08-16 20:43:01 DEBUG Launcher:13 - debug log
+2018-08-16 20:43:01 INFO  Launcher:14 - info log
+2018-08-16 20:43:01 WARN  Launcher:15 - warn log
+2018-08-16 20:43:01 ERROR Launcher:16 - error log
+2018-08-16 20:43:01 FATAL Launcher:17 - fatal log
+2018-08-16 20:43:01 DEBUG LoginScreen:17 - started login screen
+2018-08-16 20:43:44 TRACE Launcher:12 - trace log
+2018-08-16 20:43:44 DEBUG Launcher:13 - debug log
+2018-08-16 20:43:44 INFO  Launcher:14 - info log
+2018-08-16 20:43:44 WARN  Launcher:15 - warn log
+2018-08-16 20:43:44 ERROR Launcher:16 - error log
+2018-08-16 20:43:44 FATAL Launcher:17 - fatal log
+2018-08-16 20:43:44 DEBUG LoginScreen:17 - started login screen
+2018-08-16 20:43:47 TRACE LoginScreen:28 - username = admin
+2018-08-16 20:43:49 DEBUG LoginScreen:35 - received users credentials
+2018-08-16 20:43:49 WARN  UserDaoJdbc:66 - failed to find user with provided credentials from the db
+2018-08-16 20:43:49 DEBUG LoginScreen:17 - started login screen
+2018-08-16 20:43:49 TRACE LoginScreen:28 - username = 
+2018-08-17 11:06:08 TRACE Launcher:12 - trace log
+2018-08-17 11:06:08 DEBUG Launcher:13 - debug log
+2018-08-17 11:06:08 INFO  Launcher:14 - info log
+2018-08-17 11:06:08 WARN  Launcher:15 - warn log
+2018-08-17 11:06:08 ERROR Launcher:16 - error log
+2018-08-17 11:06:08 FATAL Launcher:17 - fatal log
+2018-08-17 11:06:08 DEBUG LoginScreen:19 - started login screen
+2018-08-17 11:06:14 TRACE LoginScreen:30 - username = test
+2018-08-17 11:06:15 DEBUG LoginScreen:37 - received users credentials
+2018-08-17 11:06:17 INFO  LoginScreen:42 - User logged in successfully
+2018-08-17 11:06:17 INFO  LoginScreen:46 - WelcomeUser [username=test, password=null, firstName=test, lastName=test, userAccounts=[]]
+2018-08-17 11:17:48 TRACE Launcher:12 - trace log
+2018-08-17 11:17:48 DEBUG Launcher:13 - debug log
+2018-08-17 11:17:48 INFO  Launcher:14 - info log
+2018-08-17 11:17:48 WARN  Launcher:15 - warn log
+2018-08-17 11:17:48 ERROR Launcher:16 - error log
+2018-08-17 11:17:48 FATAL Launcher:17 - fatal log
+2018-08-17 11:17:48 DEBUG LoginScreen:19 - started login screen
+2018-08-17 11:17:50 TRACE LoginScreen:30 - username = test
+2018-08-17 11:17:51 DEBUG LoginScreen:37 - received users credentials
+2018-08-17 11:17:52 INFO  LoginScreen:42 - User logged in successfully
+2018-08-17 11:17:52 INFO  LoginScreen:46 - WelcomeUser [username=test, password=null, firstName=test, lastName=test, userAccounts=[]]
+2018-08-17 11:18:02 TRACE AccountDaoJdbc:38 - 1 records created
+2018-08-17 11:18:02 ERROR UserDaoJdbc:98 - ERROR: null value in column "password" violates not-null constraint
+  Detail: Failing row contains (test, null, test, test, 0).
+2018-08-17 11:18:02 ERROR UserDaoJdbc:100 - org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+2018-08-17 11:18:02 ERROR UserDaoJdbc:100 - org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2178)
+2018-08-17 11:18:02 ERROR UserDaoJdbc:100 - org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:306)
+2018-08-17 11:18:02 ERROR UserDaoJdbc:100 - org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+2018-08-17 11:18:02 ERROR UserDaoJdbc:100 - org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+2018-08-17 11:18:02 ERROR UserDaoJdbc:100 - org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:155)
+2018-08-17 11:18:02 ERROR UserDaoJdbc:100 - org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:132)
+2018-08-17 11:18:02 ERROR UserDaoJdbc:100 - main.java.com.revature.daos.UserDaoJdbc.updateUser(UserDaoJdbc.java:94)
+2018-08-17 11:18:02 ERROR UserDaoJdbc:100 - main.java.com.revature.screens.CreateAccountScreen.start(CreateAccountScreen.java:48)
+2018-08-17 11:18:02 ERROR UserDaoJdbc:100 - main.java.com.revature.launcher.Launcher.main(Launcher.java:20)
+2018-08-17 11:18:02 WARN  UserDaoJdbc:102 - failed to create new user
+2018-08-17 11:18:06 WARN  AccountDaoJdbc:65 - failed to find account with provided credentials from the db
+2018-08-17 11:19:54 TRACE Launcher:12 - trace log
+2018-08-17 11:19:54 DEBUG Launcher:13 - debug log
+2018-08-17 11:19:54 INFO  Launcher:14 - info log
+2018-08-17 11:19:54 WARN  Launcher:15 - warn log
+2018-08-17 11:19:54 ERROR Launcher:16 - error log
+2018-08-17 11:19:54 FATAL Launcher:17 - fatal log
+2018-08-17 11:19:55 DEBUG LoginScreen:19 - started login screen
+2018-08-17 11:19:56 TRACE LoginScreen:30 - username = test
+2018-08-17 11:19:57 DEBUG LoginScreen:37 - received users credentials
+2018-08-17 11:19:57 INFO  LoginScreen:42 - User logged in successfully
+2018-08-17 11:19:57 INFO  LoginScreen:46 - WelcomeUser [username=test, password=null, firstName=test, lastName=test, userAccounts=[]]
+2018-08-17 11:20:09 TRACE AccountDaoJdbc:38 - 1 records created
+2018-08-17 11:20:09 DEBUG CreateAccountScreen:49 - Account [accountOwners=null, transactionHistory=[2018.08.17.11.20.08 - Account Created], accountType=checking, accountNumber=0, balance=0.0]
+2018-08-17 11:20:10 ERROR UserDaoJdbc:98 - ERROR: null value in column "password" violates not-null constraint
+  Detail: Failing row contains (test, null, test, test, 0).
+2018-08-17 11:20:10 ERROR UserDaoJdbc:100 - org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+2018-08-17 11:20:10 ERROR UserDaoJdbc:100 - org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2178)
+2018-08-17 11:20:10 ERROR UserDaoJdbc:100 - org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:306)
+2018-08-17 11:20:10 ERROR UserDaoJdbc:100 - org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+2018-08-17 11:20:10 ERROR UserDaoJdbc:100 - org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+2018-08-17 11:20:10 ERROR UserDaoJdbc:100 - org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:155)
+2018-08-17 11:20:10 ERROR UserDaoJdbc:100 - org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:132)
+2018-08-17 11:20:10 ERROR UserDaoJdbc:100 - main.java.com.revature.daos.UserDaoJdbc.updateUser(UserDaoJdbc.java:94)
+2018-08-17 11:20:10 ERROR UserDaoJdbc:100 - main.java.com.revature.screens.CreateAccountScreen.start(CreateAccountScreen.java:52)
+2018-08-17 11:20:10 ERROR UserDaoJdbc:100 - main.java.com.revature.launcher.Launcher.main(Launcher.java:20)
+2018-08-17 11:20:10 WARN  UserDaoJdbc:102 - failed to create new user
+2018-08-17 11:20:16 WARN  AccountDaoJdbc:65 - failed to find account with provided credentials from the db
+2018-08-17 11:26:05 TRACE Launcher:12 - trace log
+2018-08-17 11:26:05 DEBUG Launcher:13 - debug log
+2018-08-17 11:26:05 INFO  Launcher:14 - info log
+2018-08-17 11:26:05 WARN  Launcher:15 - warn log
+2018-08-17 11:26:05 ERROR Launcher:16 - error log
+2018-08-17 11:26:05 FATAL Launcher:17 - fatal log
+2018-08-17 11:26:05 DEBUG LoginScreen:19 - started login screen
+2018-08-17 11:26:07 TRACE LoginScreen:30 - username = test
+2018-08-17 11:26:09 DEBUG LoginScreen:37 - received users credentials
+2018-08-17 11:26:10 INFO  LoginScreen:42 - User logged in successfully
+2018-08-17 11:26:10 INFO  LoginScreen:46 - WelcomeUser [username=test, password=test, firstName=test, lastName=test, userAccounts=[]]
+2018-08-17 11:26:28 TRACE AccountDaoJdbc:38 - 1 records created
+2018-08-17 11:26:28 DEBUG CreateAccountScreen:49 - Account [accountOwners=null, transactionHistory=[2018.08.17.11.26.26 - Account Created], accountType=checking, accountNumber=0, balance=0.0]
+2018-08-17 11:26:28 TRACE UserDaoJdbc:96 - 1 user updated
+2018-08-17 11:26:32 WARN  AccountDaoJdbc:65 - failed to find account with provided credentials from the db
+2018-08-17 11:48:18 TRACE Launcher:12 - trace log
+2018-08-17 11:48:18 DEBUG Launcher:13 - debug log
+2018-08-17 11:48:18 INFO  Launcher:14 - info log
+2018-08-17 11:48:18 WARN  Launcher:15 - warn log
+2018-08-17 11:48:18 ERROR Launcher:16 - error log
+2018-08-17 11:48:18 FATAL Launcher:17 - fatal log
+2018-08-17 11:48:18 DEBUG LoginScreen:19 - started login screen
+2018-08-17 11:48:20 TRACE LoginScreen:30 - username = test
+2018-08-17 11:48:21 DEBUG LoginScreen:37 - received users credentials
+2018-08-17 11:48:22 INFO  LoginScreen:42 - User logged in successfully
+2018-08-17 11:48:22 INFO  LoginScreen:46 - WelcomeUser [username=test, password=test, firstName=test, lastName=test, userAccounts=[]]
+2018-08-17 11:48:27 TRACE AccountDaoJdbc:39 - 1 records created
+2018-08-17 11:48:27 DEBUG CreateAccountScreen:50 - Account [accountOwners=null, transactionHistory=[2018.08.17.11.48.25 - Account Created], accountType=checking, accountNumber=1002, balance=0.0]
+2018-08-17 11:48:27 TRACE UserDaoJdbc:96 - 1 user updated
+2018-08-17 11:56:24 TRACE Launcher:12 - trace log
+2018-08-17 11:56:24 DEBUG Launcher:13 - debug log
+2018-08-17 11:56:24 INFO  Launcher:14 - info log
+2018-08-17 11:56:24 WARN  Launcher:15 - warn log
+2018-08-17 11:56:24 ERROR Launcher:16 - error log
+2018-08-17 11:56:24 FATAL Launcher:17 - fatal log
+2018-08-17 11:56:24 DEBUG LoginScreen:19 - started login screen
+2018-08-17 11:56:25 TRACE LoginScreen:30 - username = test
+2018-08-17 11:56:26 DEBUG LoginScreen:37 - received users credentials
+2018-08-17 11:56:27 INFO  LoginScreen:42 - User logged in successfully
+2018-08-17 11:56:27 INFO  LoginScreen:46 - WelcomeUser [username=test, password=test, firstName=test, lastName=test, userAccounts=[]]
+2018-08-17 14:09:13 TRACE Launcher:12 - trace log
+2018-08-17 14:09:13 DEBUG Launcher:13 - debug log
+2018-08-17 14:09:13 INFO  Launcher:14 - info log
+2018-08-17 14:09:13 WARN  Launcher:15 - warn log
+2018-08-17 14:09:13 ERROR Launcher:16 - error log
+2018-08-17 14:09:13 FATAL Launcher:17 - fatal log
+2018-08-17 14:09:13 DEBUG LoginScreen:19 - started login screen
+2018-08-17 14:09:19 TRACE LoginScreen:30 - username = test
+2018-08-17 14:09:20 DEBUG LoginScreen:37 - received users credentials
+2018-08-17 14:09:22 INFO  LoginScreen:42 - User logged in successfully
+2018-08-17 14:09:22 INFO  LoginScreen:46 - WelcomeUser [username=test, password=test, firstName=test, lastName=test, userAccounts=[]]
+2018-08-17 14:09:31 ERROR AccountDaoJdbc:43 - ERROR: duplicate key value violates unique constraint "accounts_pkey"
+  Detail: Key (accountnumber)=(1002) already exists.
+2018-08-17 14:09:31 ERROR AccountDaoJdbc:45 - org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+2018-08-17 14:09:31 ERROR AccountDaoJdbc:45 - org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2178)
+2018-08-17 14:09:31 ERROR AccountDaoJdbc:45 - org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:306)
+2018-08-17 14:09:31 ERROR AccountDaoJdbc:45 - org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+2018-08-17 14:09:31 ERROR AccountDaoJdbc:45 - org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+2018-08-17 14:09:31 ERROR AccountDaoJdbc:45 - org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:155)
+2018-08-17 14:09:31 ERROR AccountDaoJdbc:45 - org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:132)
+2018-08-17 14:09:31 ERROR AccountDaoJdbc:45 - main.java.com.revature.daos.AccountDaoJdbc.createAccount(AccountDaoJdbc.java:39)
+2018-08-17 14:09:31 ERROR AccountDaoJdbc:45 - main.java.com.revature.screens.CreateAccountScreen.start(CreateAccountScreen.java:49)
+2018-08-17 14:09:31 ERROR AccountDaoJdbc:45 - main.java.com.revature.launcher.Launcher.main(Launcher.java:20)
+2018-08-17 14:09:31 WARN  AccountDaoJdbc:47 - failed to create new account
+2018-08-17 14:09:31 DEBUG CreateAccountScreen:50 - Account [accountOwners=null, transactionHistory=[2018.08.17.14.09.29 - Account Created], accountType=checking, accountNumber=1002, balance=0.0]
+2018-08-17 14:09:31 TRACE UserDaoJdbc:96 - 1 user updated
+2018-08-17 14:09:53 TRACE AccountDaoJdbc:88 - 1 records updated
+2018-08-17 17:33:27 TRACE Launcher:12 - trace log
+2018-08-17 17:33:27 DEBUG Launcher:13 - debug log
+2018-08-17 17:33:27 INFO  Launcher:14 - info log
+2018-08-17 17:33:27 WARN  Launcher:15 - warn log
+2018-08-17 17:33:27 ERROR Launcher:16 - error log
+2018-08-17 17:33:27 FATAL Launcher:17 - fatal log
+2018-08-17 17:33:27 DEBUG LoginScreen:23 - started login screen
+2018-08-17 17:33:33 TRACE LoginScreen:30 - username = test
+2018-08-17 17:33:35 DEBUG LoginScreen:39 - received users credentials
+2018-08-17 17:33:35 INFO  LoginScreen:44 - User logged in successfully
+2018-08-17 17:33:35 INFO  LoginScreen:48 - WelcomeUser [username=test, password=test, firstName=test, lastName=test, userAccounts=[]]
+2018-08-17 17:33:43 TRACE AccountDaoJdbc:41 - 1 records created
+2018-08-17 17:33:43 DEBUG CreateAccountScreen:48 - Account [accountOwners=null, transactionHistory=[2018.08.17.17.33.41 - Account Created], accountType=checking, accountNumber=1002, balance=0.0]
+2018-08-17 17:33:44 TRACE UserDaoJdbc:93 - 1 user updated
+2018-08-17 17:33:51 TRACE AccountDaoJdbc:87 - 1 records updated
+2018-08-17 17:33:51 TRACE AccountDaoJdbc:160 - 1 records created
+2018-08-17 17:34:13 TRACE AccountDaoJdbc:109 - 1 records updated
+2018-08-17 17:34:14 TRACE AccountDaoJdbc:160 - 1 records created
+2018-08-17 17:34:38 TRACE AccountDaoJdbc:41 - 1 records created
+2018-08-17 17:34:38 TRACE UserDaoJdbc:93 - 1 user updated
+2018-08-17 17:34:47 TRACE AccountDaoJdbc:87 - 1 records updated
+2018-08-17 17:34:47 TRACE AccountDaoJdbc:160 - 1 records created
+2018-08-17 17:35:18 DEBUG LoginScreen:23 - started login screen
+2018-08-17 17:35:22 TRACE LoginScreen:30 - username = register
+2018-08-17 17:35:31 TRACE UserDaoJdbc:43 - 1 records created
+2018-08-17 17:35:31 DEBUG LoginScreen:23 - started login screen
+2018-08-17 17:35:38 TRACE LoginScreen:30 - username = tetest2
+2018-08-17 17:35:39 DEBUG LoginScreen:39 - received users credentials
+2018-08-17 17:35:40 WARN  UserDaoJdbc:71 - failed to find user with provided credentials from the db
+2018-08-17 17:35:40 DEBUG LoginScreen:23 - started login screen
+2018-08-17 17:35:40 TRACE LoginScreen:30 - username = 
+2018-08-17 19:10:35 TRACE Launcher:12 - trace log
+2018-08-17 19:10:35 DEBUG Launcher:13 - debug log
+2018-08-17 19:10:35 INFO  Launcher:14 - info log
+2018-08-17 19:10:35 WARN  Launcher:15 - warn log
+2018-08-17 19:10:35 ERROR Launcher:16 - error log
+2018-08-17 19:10:35 FATAL Launcher:17 - fatal log
+2018-08-17 19:10:35 DEBUG LoginScreen:23 - started login screen
+2018-08-17 19:10:38 TRACE LoginScreen:30 - username = test
+2018-08-17 19:10:40 DEBUG LoginScreen:39 - received users credentials
+2018-08-17 19:10:41 INFO  LoginScreen:44 - User logged in successfully
+2018-08-17 19:10:41 INFO  LoginScreen:48 - WelcomeUser [username=test, password=test, firstName=test, lastName=test, userAccounts=[]]
+2018-08-17 19:10:41 DEBUG HomeScreen:16 - started home screen
+2018-08-17 19:10:42 DEBUG AccountOptionsScreen:28 - started account options screen
+2018-08-17 19:10:45 DEBUG AccountOptionsScreen:28 - started account options screen
+2018-08-17 19:10:48 DEBUG CreateAccountScreen:25 - started create account screen
+2018-08-17 19:10:50 ERROR AccountDaoJdbc:44 - ERROR: duplicate key value violates unique constraint "accounts_pkey"
+  Detail: Key (accountnumber)=(1002) already exists.
+2018-08-17 19:10:50 ERROR AccountDaoJdbc:46 - org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+2018-08-17 19:10:50 ERROR AccountDaoJdbc:46 - org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2178)
+2018-08-17 19:10:50 ERROR AccountDaoJdbc:46 - org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:306)
+2018-08-17 19:10:50 ERROR AccountDaoJdbc:46 - org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+2018-08-17 19:10:50 ERROR AccountDaoJdbc:46 - org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+2018-08-17 19:10:50 ERROR AccountDaoJdbc:46 - org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:155)
+2018-08-17 19:10:50 ERROR AccountDaoJdbc:46 - org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:132)
+2018-08-17 19:10:50 ERROR AccountDaoJdbc:46 - main.java.com.revature.daos.AccountDaoJdbc.createAccount(AccountDaoJdbc.java:40)
+2018-08-17 19:10:50 ERROR AccountDaoJdbc:46 - main.java.com.revature.screens.CreateAccountScreen.start(CreateAccountScreen.java:42)
+2018-08-17 19:10:50 ERROR AccountDaoJdbc:46 - main.java.com.revature.launcher.Launcher.main(Launcher.java:20)
+2018-08-17 19:10:50 WARN  AccountDaoJdbc:48 - failed to create new account
+2018-08-17 19:10:50 DEBUG CreateAccountScreen:43 - Created account: Account [accountOwners=null, transactionHistory=[2018.08.17.19.10.48 - Account Created], accountType=checking, accountNumber=1002, balance=0.0]
+2018-08-17 19:10:50 TRACE AccountDaoJdbc:181 - 1 records created in account owners
+2018-08-17 19:10:50 DEBUG AccountHomeScreen:25 - started account home screen
+2018-08-17 19:10:58 DEBUG DepositScreen:19 - started deposit screen
+2018-08-17 19:11:01 TRACE AccountDaoJdbc:87 - 1 records updated in accounts
+2018-08-17 19:11:01 TRACE AccountDaoJdbc:161 - 1 records created in transactions
+2018-08-17 19:11:01 DEBUG AccountHomeScreen:25 - started account home screen
+2018-08-17 19:11:05 DEBUG AccountOptionsScreen:28 - started account options screen
+2018-08-17 19:11:09 TRACE AccountOptionsScreen:50 - retrieved user accounts
+2018-08-17 19:11:13 DEBUG AccountOptionsScreen:55 - selected account: 1002
+2018-08-17 19:11:13 DEBUG AccountHomeScreen:25 - started account home screen
+2018-08-17 19:11:20 DEBUG AccountOptionsScreen:28 - started account options screen
+2018-08-17 19:11:29 DEBUG HomeScreen:16 - started home screen
+2018-08-17 19:11:32 DEBUG LoginScreen:23 - started login screen
+2018-08-17 19:11:37 TRACE LoginScreen:30 - username = register
+2018-08-17 19:11:56 ERROR UserDaoJdbc:48 - ERROR: duplicate key value violates unique constraint "users_pkey"
+  Detail: Key (username)=(test2) already exists.
+2018-08-17 19:11:56 ERROR UserDaoJdbc:50 - org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+2018-08-17 19:11:56 ERROR UserDaoJdbc:50 - org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2178)
+2018-08-17 19:11:56 ERROR UserDaoJdbc:50 - org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:306)
+2018-08-17 19:11:56 ERROR UserDaoJdbc:50 - org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+2018-08-17 19:11:56 ERROR UserDaoJdbc:50 - org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+2018-08-17 19:11:56 ERROR UserDaoJdbc:50 - org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:155)
+2018-08-17 19:11:56 ERROR UserDaoJdbc:50 - org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:132)
+2018-08-17 19:11:56 ERROR UserDaoJdbc:50 - main.java.com.revature.daos.UserDaoJdbc.createUser(UserDaoJdbc.java:44)
+2018-08-17 19:11:56 ERROR UserDaoJdbc:50 - main.java.com.revature.screens.RegisterUserScreen.start(RegisterUserScreen.java:33)
+2018-08-17 19:11:56 ERROR UserDaoJdbc:50 - main.java.com.revature.launcher.Launcher.main(Launcher.java:20)
+2018-08-17 19:11:56 WARN  UserDaoJdbc:52 - failed to create new user
+2018-08-17 19:11:56 DEBUG LoginScreen:23 - started login screen
+2018-08-17 19:12:01 TRACE LoginScreen:30 - username = test2
+2018-08-17 19:12:20 DEBUG LoginScreen:39 - received users credentials
+2018-08-17 19:12:21 WARN  UserDaoJdbc:73 - failed to find user with provided credentials from the db
+2018-08-17 19:12:21 DEBUG LoginScreen:23 - started login screen
+2018-08-17 19:12:21 TRACE LoginScreen:30 - username = 
+2018-08-17 19:14:12 TRACE Launcher:12 - trace log
+2018-08-17 19:14:12 DEBUG Launcher:13 - debug log
+2018-08-17 19:14:12 INFO  Launcher:14 - info log
+2018-08-17 19:14:12 WARN  Launcher:15 - warn log
+2018-08-17 19:14:12 ERROR Launcher:16 - error log
+2018-08-17 19:14:12 FATAL Launcher:17 - fatal log
+2018-08-17 19:14:12 DEBUG LoginScreen:23 - started login screen
+2018-08-17 19:14:14 TRACE LoginScreen:30 - username = test2
+2018-08-17 19:14:16 DEBUG LoginScreen:39 - received users credentials
+2018-08-17 19:14:16 WARN  UserDaoJdbc:73 - failed to find user with provided credentials from the db
+2018-08-17 19:14:16 DEBUG LoginScreen:23 - started login screen
+2018-08-17 19:14:16 TRACE LoginScreen:30 - username = 
+2018-08-17 19:16:23 TRACE Launcher:12 - trace log
+2018-08-17 19:16:23 DEBUG Launcher:13 - debug log
+2018-08-17 19:16:23 INFO  Launcher:14 - info log
+2018-08-17 19:16:23 WARN  Launcher:15 - warn log
+2018-08-17 19:16:23 ERROR Launcher:16 - error log
+2018-08-17 19:16:23 FATAL Launcher:17 - fatal log
+2018-08-17 19:16:23 DEBUG LoginScreen:23 - started login screen
+2018-08-17 19:16:29 TRACE LoginScreen:30 - username = test2
+2018-08-17 19:16:34 DEBUG LoginScreen:39 - received users credentials
+2018-08-17 19:16:34 INFO  LoginScreen:44 - User logged in successfully
+2018-08-17 19:16:34 INFO  LoginScreen:48 - WelcomeUser [username=test2, password=test, firstName=test, lastName=test, userAccounts=[]]
+2018-08-17 19:16:34 DEBUG HomeScreen:16 - started home screen
+2018-08-17 19:16:48 DEBUG AccountOptionsScreen:28 - started account options screen
+2018-08-17 19:16:50 DEBUG CreateAccountScreen:24 - started create account screen
+2018-08-17 19:16:52 ERROR AccountDaoJdbc:44 - ERROR: duplicate key value violates unique constraint "accounts_pkey"
+  Detail: Key (accountnumber)=(1002) already exists.
+2018-08-17 19:16:52 ERROR AccountDaoJdbc:46 - org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2433)
+2018-08-17 19:16:52 ERROR AccountDaoJdbc:46 - org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2178)
+2018-08-17 19:16:52 ERROR AccountDaoJdbc:46 - org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:306)
+2018-08-17 19:16:52 ERROR AccountDaoJdbc:46 - org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:441)
+2018-08-17 19:16:52 ERROR AccountDaoJdbc:46 - org.postgresql.jdbc.PgStatement.execute(PgStatement.java:365)
+2018-08-17 19:16:52 ERROR AccountDaoJdbc:46 - org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:155)
+2018-08-17 19:16:52 ERROR AccountDaoJdbc:46 - org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:132)
+2018-08-17 19:16:52 ERROR AccountDaoJdbc:46 - main.java.com.revature.daos.AccountDaoJdbc.createAccount(AccountDaoJdbc.java:40)
+2018-08-17 19:16:52 ERROR AccountDaoJdbc:46 - main.java.com.revature.screens.CreateAccountScreen.start(CreateAccountScreen.java:50)
+2018-08-17 19:16:52 ERROR AccountDaoJdbc:46 - main.java.com.revature.launcher.Launcher.main(Launcher.java:20)
+2018-08-17 19:16:52 WARN  AccountDaoJdbc:48 - failed to create new account
+2018-08-17 19:16:52 DEBUG CreateAccountScreen:51 - Created account: Account [accountOwners=null, transactionHistory=[2018.08.17.19.16.50 - Account Created], accountType=savings, accountNumber=1002, balance=0.0]
+2018-08-17 19:16:53 TRACE AccountDaoJdbc:181 - 1 records created in account owners
+2018-08-17 19:16:53 DEBUG AccountHomeScreen:25 - started account home screen
+2018-08-17 19:17:03 DEBUG AccountHomeScreen:25 - started account home screen
+2018-08-17 19:19:53 WARN  AccountHomeScreen:67 - deleting account 1002
+2018-08-17 19:19:54 TRACE AccountDaoJdbc:132 - 1 account deleted
+2018-08-17 19:19:54 DEBUG AccountHomeScreen:69 - Account 1002 deleted
+2018-08-17 19:19:54 DEBUG AccountHomeScreen:25 - started account home screen
+2018-08-17 19:21:39 DEBUG AccountOptionsScreen:28 - started account options screen
+2018-08-17 19:21:41 DEBUG CreateAccountScreen:24 - started create account screen
+2018-08-17 19:21:43 TRACE AccountDaoJdbc:41 - 1 records created in accounts
+2018-08-17 19:21:43 DEBUG CreateAccountScreen:42 - Created account: Account [accountOwners=null, transactionHistory=[2018.08.17.19.21.41 - Account Created], accountType=checking, accountNumber=1004, balance=0.0]
+2018-08-17 19:21:44 TRACE AccountDaoJdbc:181 - 1 records created in account owners
+2018-08-17 19:21:44 DEBUG AccountHomeScreen:25 - started account home screen
+2018-08-17 19:22:02 DEBUG AddAccountOwnerScreen:21 - started add account owner screen
+2018-08-17 19:22:13 TRACE AccountDaoJdbc:181 - 1 records created in account owners
+2018-08-17 19:22:13 DEBUG AccountHomeScreen:25 - started account home screen
+2018-08-17 19:24:31 TRACE AccountDaoJdbc:109 - 1 records updated in accounts
+2018-08-17 19:24:31 TRACE AccountDaoJdbc:87 - 1 records updated in accounts
+2018-08-17 19:24:31 DEBUG AccountDaoJdbc:154 - wire transfer
+2018-08-17 19:24:31 TRACE AccountDaoJdbc:161 - 1 records created in transactions
+2018-08-17 19:24:31 DEBUG AccountHomeScreen:25 - started account home screen
+2018-08-17 19:24:38 DEBUG AccountHomeScreen:25 - started account home screen
+2018-08-17 19:34:43 TRACE Launcher:12 - trace log
+2018-08-17 19:34:43 DEBUG Launcher:13 - debug log
+2018-08-17 19:34:43 INFO  Launcher:14 - info log
+2018-08-17 19:34:43 WARN  Launcher:15 - warn log
+2018-08-17 19:34:43 ERROR Launcher:16 - error log
+2018-08-17 19:34:43 FATAL Launcher:17 - fatal log
+2018-08-17 19:34:43 DEBUG LoginScreen:23 - started login screen
+2018-08-17 19:34:47 TRACE LoginScreen:30 - username = test
+2018-08-17 19:34:49 DEBUG LoginScreen:39 - received users credentials
+2018-08-17 19:34:50 INFO  LoginScreen:44 - User logged in successfully
+2018-08-17 19:34:50 INFO  LoginScreen:48 - WelcomeUser [username=test, password=test, firstName=test, lastName=test, userAccounts=[]]
+2018-08-17 19:34:50 DEBUG HomeScreen:16 - started home screen
+2018-08-17 19:34:51 DEBUG AccountOptionsScreen:28 - started account options screen
+2018-08-17 19:37:32 TRACE AccountOptionsScreen:50 - retrieved user accounts
+2018-08-17 19:39:01 DEBUG AccountOptionsScreen:55 - selected account: 1004
+2018-08-17 19:39:01 DEBUG AccountHomeScreen:23 - started account home screen
+2018-08-17 19:39:49 TRACE Launcher:12 - trace log
+2018-08-17 19:39:49 DEBUG Launcher:13 - debug log
+2018-08-17 19:39:49 INFO  Launcher:14 - info log
+2018-08-17 19:39:49 WARN  Launcher:15 - warn log
+2018-08-17 19:39:49 ERROR Launcher:16 - error log
+2018-08-17 19:39:49 FATAL Launcher:17 - fatal log
+2018-08-17 19:39:49 DEBUG LoginScreen:23 - started login screen
+2018-08-17 19:39:51 TRACE LoginScreen:30 - username = test
+2018-08-17 19:39:52 DEBUG LoginScreen:39 - received users credentials
+2018-08-17 19:39:53 INFO  LoginScreen:44 - User logged in successfully
+2018-08-17 19:39:53 INFO  LoginScreen:48 - WelcomeUser [username=test, password=test, firstName=test, lastName=test, userAccounts=[]]
+2018-08-17 19:39:53 DEBUG HomeScreen:16 - started home screen
+2018-08-17 19:39:54 DEBUG AccountOptionsScreen:28 - started account options screen
+2018-08-17 19:39:56 TRACE AccountOptionsScreen:50 - retrieved user accounts
+2018-08-17 19:40:03 DEBUG AccountOptionsScreen:55 - selected account: Account [accountOwners=null, transactionHistory=[2018.08.17.19.40.03 - Account Created], accountType=checking, accountNumber=1004, balance=-20.0]
+2018-08-17 19:40:03 DEBUG AccountHomeScreen:23 - started account home screen
+2018-08-17 19:40:29 TRACE Launcher:12 - trace log
+2018-08-17 19:40:29 DEBUG Launcher:13 - debug log
+2018-08-17 19:40:29 INFO  Launcher:14 - info log
+2018-08-17 19:40:29 WARN  Launcher:15 - warn log
+2018-08-17 19:40:29 ERROR Launcher:16 - error log
+2018-08-17 19:40:29 FATAL Launcher:17 - fatal log
+2018-08-17 19:40:29 DEBUG LoginScreen:23 - started login screen
+2018-08-17 19:40:31 TRACE LoginScreen:30 - username = test
+2018-08-17 19:40:32 DEBUG LoginScreen:39 - received users credentials
+2018-08-17 19:40:33 WARN  UserDaoJdbc:73 - failed to find user with provided credentials from the db
+2018-08-17 19:40:33 DEBUG LoginScreen:23 - started login screen
+2018-08-17 19:40:33 TRACE LoginScreen:30 - username = 
+2018-08-17 19:40:35 DEBUG LoginScreen:39 - received users credentials
+2018-08-17 19:40:36 WARN  UserDaoJdbc:73 - failed to find user with provided credentials from the db
+2018-08-17 19:40:36 DEBUG LoginScreen:23 - started login screen
+2018-08-17 19:40:36 TRACE LoginScreen:30 - username = 
+2018-08-17 19:40:40 DEBUG LoginScreen:39 - received users credentials
+2018-08-17 19:40:40 WARN  UserDaoJdbc:73 - failed to find user with provided credentials from the db
+2018-08-17 19:40:40 DEBUG LoginScreen:23 - started login screen
+2018-08-17 19:40:40 TRACE LoginScreen:30 - username = 
+2018-08-17 19:41:11 TRACE Launcher:12 - trace log
+2018-08-17 19:41:11 DEBUG Launcher:13 - debug log
+2018-08-17 19:41:11 INFO  Launcher:14 - info log
+2018-08-17 19:41:11 WARN  Launcher:15 - warn log
+2018-08-17 19:41:11 ERROR Launcher:16 - error log
+2018-08-17 19:41:11 FATAL Launcher:17 - fatal log
+2018-08-17 19:41:11 DEBUG LoginScreen:23 - started login screen
+2018-08-17 19:41:13 TRACE LoginScreen:30 - username = testw
+2018-08-17 19:41:15 DEBUG LoginScreen:39 - received users credentials
+2018-08-17 19:41:15 WARN  UserDaoJdbc:73 - failed to find user with provided credentials from the db
+2018-08-17 19:41:15 DEBUG LoginScreen:23 - started login screen
+2018-08-17 19:41:21 TRACE LoginScreen:30 - username = test
+2018-08-17 19:41:22 DEBUG LoginScreen:39 - received users credentials
+2018-08-17 19:41:23 INFO  LoginScreen:44 - User logged in successfully
+2018-08-17 19:41:23 INFO  LoginScreen:48 - WelcomeUser [username=test, password=test, firstName=test, lastName=test, userAccounts=[]]
+2018-08-17 19:41:23 DEBUG HomeScreen:16 - started home screen
+2018-08-17 19:41:25 DEBUG AccountOptionsScreen:28 - started account options screen
+2018-08-17 19:41:36 TRACE Launcher:12 - trace log
+2018-08-17 19:41:36 DEBUG Launcher:13 - debug log
+2018-08-17 19:41:36 INFO  Launcher:14 - info log
+2018-08-17 19:41:36 WARN  Launcher:15 - warn log
+2018-08-17 19:41:36 ERROR Launcher:16 - error log
+2018-08-17 19:41:36 FATAL Launcher:17 - fatal log
+2018-08-17 19:41:36 DEBUG LoginScreen:23 - started login screen
+2018-08-17 19:41:39 TRACE LoginScreen:30 - username = test
+2018-08-17 19:41:41 DEBUG LoginScreen:39 - received users credentials
+2018-08-17 19:41:42 INFO  LoginScreen:44 - User logged in successfully
+2018-08-17 19:41:42 INFO  LoginScreen:48 - WelcomeUser [username=test, password=test, firstName=test, lastName=test, userAccounts=[]]
+2018-08-17 19:41:42 DEBUG HomeScreen:16 - started home screen
+2018-08-17 19:41:46 DEBUG AccountOptionsScreen:28 - started account options screen
+2018-08-17 19:41:48 TRACE AccountOptionsScreen:50 - retrieved user accounts
+2018-08-17 19:43:28 TRACE Launcher:12 - trace log
+2018-08-17 19:43:28 DEBUG Launcher:13 - debug log
+2018-08-17 19:43:28 INFO  Launcher:14 - info log
+2018-08-17 19:43:28 WARN  Launcher:15 - warn log
+2018-08-17 19:43:28 ERROR Launcher:16 - error log
+2018-08-17 19:43:28 FATAL Launcher:17 - fatal log
+2018-08-17 19:43:28 DEBUG LoginScreen:23 - started login screen
+2018-08-17 19:43:30 TRACE LoginScreen:30 - username = test
+2018-08-17 19:43:31 DEBUG LoginScreen:39 - received users credentials
+2018-08-17 19:43:32 INFO  LoginScreen:44 - User logged in successfully
+2018-08-17 19:43:32 INFO  LoginScreen:48 - WelcomeUser [username=test, password=test, firstName=test, lastName=test, userAccounts=[]]
+2018-08-17 19:43:32 DEBUG HomeScreen:16 - started home screen
+2018-08-17 19:43:33 DEBUG AccountOptionsScreen:28 - started account options screen
+2018-08-17 19:43:36 TRACE AccountOptionsScreen:50 - retrieved user accounts

@@ -2,62 +2,73 @@ package main.java.com.revature.screens;
 
 import java.util.Scanner;
 
+import org.apache.log4j.Logger;
+
 import main.java.com.revature.beans.Account;
-import main.java.com.revature.beans.User;
+import main.java.com.revature.daos.AccountDao;
+import main.java.com.revature.util.AppState;
 
 public class AccountHomeScreen implements Screen {
 	private Scanner scan = new Scanner(System.in);
-	private Account a;
-	private User currentUser;
-
-	public AccountHomeScreen(Account a, User currentUser) {
-		super();
-		this.a = a;
-		this.currentUser = currentUser;
-	}
+	private AccountDao ad = AccountDao.currentAccountDao;
+	private Account currentAccount = AppState.state.getCurrentAccount();
+	private Logger log = Logger.getRootLogger();
 
 	@Override
 	public Screen start() {
 		/*
-		 * 
+		 * Displays basic account operations as well as advanced options, namely - Wire
+		 * funds, add account owner making the account sharable
 		 */
-                System.out.println("***************************************************");
-                System.out.println("*                    ACCOUNT                      *");
-                System.out.println("***************************************************");
-                System.out.println(" ");
+		log.debug("started account home screen");
+		System.out.println("***************************************************");
+		System.out.println("*                    ACCOUNT                      *");
+		System.out.println("***************************************************");
+		System.out.println(" ");
 		System.out.println("  Please choose an option: ");
-                System.out.println(" ");
+		System.out.println(" ");
 		System.out.println("  1: Deposit ");
 		System.out.println("  2: Withdrawal  ");
 		System.out.println("  3: Balance Inquiry ");
 		System.out.println("  4: Transaction History ");
 		System.out.println("  5: Wire Funds ");
 		System.out.println("  6: Add Account Owner ");
-		System.out.println("  7: Previous Screen ");
+		System.out.println("  7: Delete Account ");
+		System.out.println("  8: Previous Screen ");
 		String selection = scan.nextLine();
 		switch (selection) {
 		case "1":
-			System.out.println("Enter 1 to make a deposit");
-			return new DepositScreen(a, currentUser);
+			System.out.println(" Enter 1 to make a deposit");
+			return new DepositScreen();
 		case "2":
-			System.out.println("Enter 2 to make a withdrawal");
-			return new WithdrawalScreen(a, currentUser);
+			System.out.println(" Enter 2 to make a withdrawal");
+			return new WithdrawalScreen();
 		case "3":
-			System.out.println("Enter 3 to view account balance");
-			System.out.println("$" + a.getBalance());
+			double accountBalance = ad.getAccount(currentAccount.getAccountNumber()).getBalance();
+			System.out.println(" Enter 3 to view account balance");
+			System.out.println("$" + accountBalance);
 			break;
 		case "4":
-			System.out.println("Transaction History:");
-			for (int i = 0; i < a.getTransactionHistory().size(); i++) {
-				System.out.println(a.getTransactionHistory().get(i));
+			System.out.println(" Transaction History:");
+			for (int i = 0; i < currentAccount.getTransactionHistory().size(); i++) {
+				System.out.println(currentAccount.getTransactionHistory().get(i));
 			}
 			break;
 		case "5":
-			return new WireFundsScreen(a, currentUser);
+			return new WireFundsScreen();
 		case "6":
-			return new AddAccountOwnerScreen(a, currentUser);
+			return new AddAccountOwnerScreen();
 		case "7":
-			return new AccountOptionsScreen(currentUser);
+			System.out.println(" Are you sure you want to delete this account? ");
+			String deleteAnswer = scan.nextLine();
+			if ("yes".equalsIgnoreCase(deleteAnswer)) {
+				log.warn("deleting account " + currentAccount.getAccountNumber());
+				ad.deleteAccount(currentAccount.getAccountNumber());
+				log.debug("Account " + currentAccount.getAccountNumber() + " deleted");
+			}
+			return new AccountOptionsScreen();
+		case "8":
+			return new AccountOptionsScreen();
 		}
 		return this;
 	}

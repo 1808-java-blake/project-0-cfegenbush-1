@@ -1,24 +1,17 @@
 package main.java.com.revature.screens;
 
-import java.io.File;
-import java.util.Arrays;
 import java.util.Scanner;
-
+import org.apache.log4j.Logger;
 import main.java.com.revature.beans.Account;
-import main.java.com.revature.beans.User;
 import main.java.com.revature.daos.AccountDao;
+import main.java.com.revature.util.AppState;
 
 public class WireFundsScreen implements Screen {
-	Scanner scan = new Scanner(System.in);
-	AccountDao ad = AccountDao.currentAccountDao;
-	Account a;
-	User currentUser;
-	
-	public WireFundsScreen(Account a, User currentUser) {
-		super();
-		this.a = a;
-		this.currentUser = currentUser;
-	}
+	private Scanner scan = new Scanner(System.in);
+	private AccountDao ad = AccountDao.currentAccountDao;
+	private Account currentAccount = AppState.state.getCurrentAccount();
+	private Account targetAccount;
+	private Logger log = Logger.getRootLogger();
 
 	@Override
 	public Screen start() {
@@ -27,25 +20,22 @@ public class WireFundsScreen implements Screen {
 		System.out.println("***************************************************");
 		System.out.println(" ");
 		System.out.print(" Enter the account number:  ");
-		String accountNumber = scan.nextLine();
-		
-		File accountsFolder = new File("src/main/resources/accounts");
-		String[] listOfAccounts = accountsFolder.list();
-		if (Arrays.toString(listOfAccounts).replaceAll(".txt", "").contains(accountNumber)) {
-			System.out.print(" Enter the amount to transfer: $ ");
-			int amount = scan.nextInt();
-			ad.makeWithdrawal(a, amount);
-			ad.updateAccount(a);
-			Account targetAccount = a;
-			targetAccount = ad.getAccount(Integer.parseInt(accountNumber));
-			ad.makeDeposit(targetAccount, amount);
-			ad.updateAccount(targetAccount);
-		} else {
-			System.out.println("Account does not exist. Please try again.");
+		int accountNumber = scan.nextInt();
+
+		try {
+			targetAccount = ad.getAccount(accountNumber);
+			System.out.println(" Enter the amount to transfer: $ ");
+			int amountToTransfer = scan.nextInt();
+			ad.makeWithdrawal(currentAccount, amountToTransfer);
+			ad.makeDeposit(targetAccount, amountToTransfer);
+			ad.addTransaction(currentAccount, targetAccount, "Wire Transfer", amountToTransfer);
+			return new AccountHomeScreen();
+		} catch (Exception e) {
+			System.out.println(" Account number is incorrect or does not exist");
+			log.error("Failed to find account with given account number");
 			return this;
 		}
-		
-		return new AccountHomeScreen(a, currentUser);
+
 	}
 
 }
