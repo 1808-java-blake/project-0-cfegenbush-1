@@ -5,14 +5,13 @@ import java.util.Scanner;
 import org.apache.log4j.Logger;
 
 import main.java.com.revature.beans.Account;
-import main.java.com.revature.beans.User;
 import main.java.com.revature.daos.AccountDao;
 import main.java.com.revature.util.AppState;
 
 public class CreateAccountScreen implements Screen {
 	private Scanner scan = new Scanner(System.in);
 	private AccountDao ad = AccountDao.currentAccountDao;
-	private User currentUser = AppState.state.getCurrentUser();
+	private String username = AppState.state.getCurrentUser().getUsername();
 	private AppState state = AppState.state;
 	private Logger log = Logger.getRootLogger();
 
@@ -38,19 +37,19 @@ public class CreateAccountScreen implements Screen {
 			a.setNewAccountNumber();
 			a.setAccountType("checking");
 			a.setBalance(0.00);
-			ad.createAccount(a);
+			ad.createAccount(a, username);
 			log.debug("Created account: " + a.toString());
 			state.setCurrentAccount(a);
-			ad.addAccountOwner(a.getAccountNumber(), currentUser.getUsername());
+			ad.addAccountOwner(a.getAccountNumber(), username);
 			return new AccountHomeScreen();
 		case "2":
 			a.setNewAccountNumber();
 			a.setAccountType("savings");
 			a.setBalance(0.00);
-			ad.createAccount(a);
+			ad.createAccount(a, username);
 			log.debug("Created account: " + a.toString());
 			state.setCurrentAccount(a);
-			ad.addAccountOwner(a.getAccountNumber(), currentUser.getUsername());
+			ad.addAccountOwner(a.getAccountNumber(), username);
 			return new AccountHomeScreen();
 		case "3":
 			return new AccountOptionsScreen();

@@ -440,3 +440,234 @@
 2018-08-17 19:43:32 DEBUG HomeScreen:16 - started home screen
 2018-08-17 19:43:33 DEBUG AccountOptionsScreen:28 - started account options screen
 2018-08-17 19:43:36 TRACE AccountOptionsScreen:50 - retrieved user accounts
+2018-08-18 20:08:43 TRACE Launcher:12 - trace log
+2018-08-18 20:08:43 DEBUG Launcher:13 - debug log
+2018-08-18 20:08:43 INFO  Launcher:14 - info log
+2018-08-18 20:08:43 WARN  Launcher:15 - warn log
+2018-08-18 20:08:43 ERROR Launcher:16 - error log
+2018-08-18 20:08:43 FATAL Launcher:17 - fatal log
+2018-08-18 20:08:43 DEBUG LoginScreen:23 - started login screen
+2018-08-18 20:08:49 TRACE LoginScreen:30 - username = test
+2018-08-18 20:08:50 DEBUG LoginScreen:39 - received users credentials
+2018-08-18 20:08:50 INFO  LoginScreen:44 - User logged in successfully
+2018-08-18 20:08:50 INFO  LoginScreen:48 - WelcomeUser [username=test, password=test, firstName=test, lastName=test, userAccounts=[]]
+2018-08-18 20:08:50 DEBUG HomeScreen:16 - started home screen
+2018-08-18 20:08:52 DEBUG AccountOptionsScreen:28 - started account options screen
+2018-08-18 20:08:53 TRACE AccountOptionsScreen:50 - retrieved user accounts
+2018-08-18 20:36:19 TRACE Launcher:12 - trace log
+2018-08-18 20:36:19 DEBUG Launcher:13 - debug log
+2018-08-18 20:36:19 INFO  Launcher:14 - info log
+2018-08-18 20:36:19 WARN  Launcher:15 - warn log
+2018-08-18 20:36:19 ERROR Launcher:16 - error log
+2018-08-18 20:36:19 FATAL Launcher:17 - fatal log
+2018-08-18 20:36:19 DEBUG LoginScreen:23 - started login screen
+2018-08-18 20:36:44 TRACE LoginScreen:30 - username = test
+2018-08-18 20:36:44 DEBUG LoginScreen:39 - received users credentials
+2018-08-18 20:36:45 INFO  LoginScreen:44 - User logged in successfully
+2018-08-18 20:36:45 INFO  LoginScreen:48 - WelcomeUser [username=test, password=test, firstName=test, lastName=test, userAccounts=[]]
+2018-08-18 20:36:45 DEBUG HomeScreen:16 - started home screen
+2018-08-18 20:36:46 DEBUG AccountOptionsScreen:28 - started account options screen
+2018-08-18 20:36:48 TRACE AccountOptionsScreen:50 - retrieved user accounts
+2018-08-18 20:36:51 DEBUG AccountOptionsScreen:55 - selected account: Account [accountOwners=null, transactionHistory=[2018.08.18.20.36.51 - Account Created], accountType=checking, accountNumber=1004, balance=-20.0]
+2018-08-18 20:36:51 DEBUG AccountHomeScreen:23 - started account home screen
+2018-08-18 20:36:54 DEBUG WithdrawalScreen:19 - started withdrawal screen
+2018-08-18 20:37:59 TRACE AccountDaoJdbc:111 - 1 records updated in accounts
+2018-08-18 20:37:59 TRACE AccountDaoJdbc:163 - 1 records created in transactions
+2018-08-18 20:37:59 DEBUG AccountHomeScreen:23 - started account home screen
+2018-08-18 20:38:10 DEBUG AccountHomeScreen:23 - started account home screen
+2018-08-18 20:42:40 DEBUG AccountHomeScreen:23 - started account home screen
+2018-08-18 20:43:31 DEBUG DepositScreen:19 - started deposit screen
+2018-08-18 20:43:34 TRACE AccountDaoJdbc:89 - 1 records updated in accounts
+2018-08-18 20:43:35 TRACE AccountDaoJdbc:163 - 1 records created in transactions
+2018-08-18 20:43:35 DEBUG AccountHomeScreen:23 - started account home screen
+2018-08-18 20:43:37 DEBUG WithdrawalScreen:19 - started withdrawal screen
+2018-08-18 20:43:39 TRACE AccountDaoJdbc:111 - 1 records updated in accounts
+2018-08-18 20:43:40 TRACE AccountDaoJdbc:163 - 1 records created in transactions
+2018-08-18 20:43:40 DEBUG AccountHomeScreen:23 - started account home screen
+2018-08-18 20:43:43 DEBUG AccountHomeScreen:23 - started account home screen
+2018-08-18 20:44:51 DEBUG AccountHomeScreen:23 - started account home screen
+2018-08-18 20:45:40 TRACE Launcher:12 - trace log
+2018-08-18 20:45:40 DEBUG Launcher:13 - debug log
+2018-08-18 20:45:40 INFO  Launcher:14 - info log
+2018-08-18 20:45:40 WARN  Launcher:15 - warn log
+2018-08-18 20:45:40 ERROR Launcher:16 - error log
+2018-08-18 20:45:40 FATAL Launcher:17 - fatal log
+2018-08-18 20:45:40 DEBUG LoginScreen:23 - started login screen
+2018-08-18 20:45:43 TRACE LoginScreen:30 - username = test
+2018-08-18 20:45:44 DEBUG LoginScreen:39 - received users credentials
+2018-08-18 20:45:45 INFO  LoginScreen:44 - User logged in successfully
+2018-08-18 20:45:45 INFO  LoginScreen:48 - WelcomeUser [username=test, password=test, firstName=test, lastName=test, userAccounts=[]]
+2018-08-18 20:45:45 DEBUG HomeScreen:16 - started home screen
+2018-08-18 20:45:46 DEBUG AccountOptionsScreen:28 - started account options screen
+2018-08-18 20:45:48 TRACE AccountOptionsScreen:50 - retrieved user accounts
+2018-08-18 20:45:50 DEBUG AccountOptionsScreen:55 - selected account: Account [accountOwners=null, transactionHistory=[2018.08.18.20.45.50 - Account Created], accountType=checking, accountNumber=1004, balance=4.0]
+2018-08-18 20:45:50 DEBUG AccountHomeScreen:23 - started account home screen
+2018-08-18 20:45:55 DEBUG AccountHomeScreen:23 - started account home screen
+2018-08-18 21:16:21 TRACE Launcher:12 - trace log
+2018-08-18 21:16:21 DEBUG Launcher:13 - debug log
+2018-08-18 21:16:21 INFO  Launcher:14 - info log
+2018-08-18 21:16:21 WARN  Launcher:15 - warn log
+2018-08-18 21:16:21 ERROR Launcher:16 - error log
+2018-08-18 21:16:21 FATAL Launcher:17 - fatal log
+2018-08-18 21:16:21 DEBUG LoginScreen:23 - started login screen
+2018-08-18 21:16:23 TRACE LoginScreen:30 - username = register
+2018-08-18 21:16:31 TRACE UserDaoJdbc:45 - 1 records created
+2018-08-18 21:16:31 DEBUG LoginScreen:23 - started login screen
+2018-08-18 21:17:12 TRACE LoginScreen:30 - username = admin
+2018-08-18 21:17:14 DEBUG LoginScreen:39 - received users credentials
+2018-08-18 21:17:14 INFO  LoginScreen:44 - User logged in successfully
+2018-08-18 21:17:14 INFO  LoginScreen:48 - WelcomeUser [username=admin, password=admin, firstName=admin, lastName=admin, admin=0, userAccounts=[]]
+2018-08-18 21:17:14 DEBUG HomeScreen:16 - started home screen
+2018-08-18 21:17:54 TRACE Launcher:12 - trace log
+2018-08-18 21:17:54 DEBUG Launcher:13 - debug log
+2018-08-18 21:17:54 INFO  Launcher:14 - info log
+2018-08-18 21:17:54 WARN  Launcher:15 - warn log
+2018-08-18 21:17:54 ERROR Launcher:16 - error log
+2018-08-18 21:17:54 FATAL Launcher:17 - fatal log
+2018-08-18 21:17:54 DEBUG LoginScreen:23 - started login screen
+2018-08-18 21:17:56 TRACE LoginScreen:30 - username = admin
+2018-08-18 21:17:57 DEBUG LoginScreen:39 - received users credentials
+2018-08-18 21:17:58 INFO  LoginScreen:44 - User logged in successfully
+2018-08-18 21:17:58 DEBUG AdminScreen:20 - started admin screen
+2018-08-18 21:17:58 INFO  AdminScreen:34 - [test, test2]
+2018-08-18 21:18:01 TRACE AdminScreen:39 - user selected=test
+2018-08-18 21:18:02 INFO  AdminScreen:51 - [1004]
+2018-08-18 21:18:05 TRACE AdminScreen:57 - selected account= 1004
+2018-08-18 21:18:07 DEBUG AdminScreen:70 - retrieved account transaction history
+2018-08-18 21:18:07 DEBUG AdminScreen:20 - started admin screen
+2018-08-18 21:18:07 INFO  AdminScreen:34 - [test, test2]
+2018-08-18 21:21:11 TRACE Launcher:12 - trace log
+2018-08-18 21:21:11 DEBUG Launcher:13 - debug log
+2018-08-18 21:21:11 INFO  Launcher:14 - info log
+2018-08-18 21:21:11 WARN  Launcher:15 - warn log
+2018-08-18 21:21:11 ERROR Launcher:16 - error log
+2018-08-18 21:21:11 FATAL Launcher:17 - fatal log
+2018-08-18 21:21:12 DEBUG LoginScreen:23 - started login screen
+2018-08-18 21:21:13 TRACE LoginScreen:30 - username = admin
+2018-08-18 21:21:14 DEBUG LoginScreen:39 - received users credentials
+2018-08-18 21:21:15 INFO  LoginScreen:44 - User logged in successfully
+2018-08-18 21:21:15 DEBUG AdminScreen:20 - started admin screen
+2018-08-18 21:21:15 INFO  AdminScreen:34 - [test, test2]
+2018-08-18 21:21:17 TRACE AdminScreen:39 - user selected=test
+2018-08-18 21:21:17 INFO  AdminScreen:51 - [1004]
+2018-08-18 21:21:19 TRACE AdminScreen:57 - selected account= 1004
+2018-08-18 21:21:21 DEBUG AdminScreen:70 - retrieved account transaction history
+2018-08-18 21:21:27 DEBUG AdminScreen:20 - started admin screen
+2018-08-18 21:21:27 INFO  AdminScreen:34 - [test, test2]
+2018-08-18 21:21:27 TRACE AdminScreen:39 - user selected=
+2018-08-18 21:21:28 INFO  AdminScreen:51 - []
+2018-08-18 21:21:52 TRACE Launcher:12 - trace log
+2018-08-18 21:21:53 DEBUG Launcher:13 - debug log
+2018-08-18 21:21:53 INFO  Launcher:14 - info log
+2018-08-18 21:21:53 WARN  Launcher:15 - warn log
+2018-08-18 21:21:53 ERROR Launcher:16 - error log
+2018-08-18 21:21:53 FATAL Launcher:17 - fatal log
+2018-08-18 21:21:53 DEBUG LoginScreen:23 - started login screen
+2018-08-18 21:21:55 TRACE LoginScreen:30 - username = admin
+2018-08-18 21:21:55 DEBUG LoginScreen:39 - received users credentials
+2018-08-18 21:21:56 INFO  LoginScreen:44 - User logged in successfully
+2018-08-18 21:21:56 DEBUG AdminScreen:20 - started admin screen
+2018-08-18 21:21:56 INFO  AdminScreen:34 - [test, test2]
+2018-08-18 21:22:00 TRACE AdminScreen:39 - user selected=tes
+2018-08-18 21:22:01 INFO  AdminScreen:51 - []
+2018-08-18 21:25:17 TRACE Launcher:12 - trace log
+2018-08-18 21:25:17 DEBUG Launcher:13 - debug log
+2018-08-18 21:25:17 INFO  Launcher:14 - info log
+2018-08-18 21:25:17 WARN  Launcher:15 - warn log
+2018-08-18 21:25:17 ERROR Launcher:16 - error log
+2018-08-18 21:25:17 FATAL Launcher:17 - fatal log
+2018-08-18 21:25:17 DEBUG LoginScreen:23 - started login screen
+2018-08-18 21:25:20 TRACE LoginScreen:30 - username = admin
+2018-08-18 21:25:21 DEBUG LoginScreen:39 - received users credentials
+2018-08-18 21:25:21 INFO  LoginScreen:44 - User logged in successfully
+2018-08-18 21:25:21 DEBUG AdminScreen:20 - started admin screen
+2018-08-18 21:25:22 INFO  AdminScreen:34 - [test, test2]
+2018-08-18 21:25:24 TRACE AdminScreen:39 - user selected=tes
+2018-08-18 21:25:24 INFO  AdminScreen:49 - []
+2018-08-18 21:27:00 TRACE Launcher:12 - trace log
+2018-08-18 21:27:00 DEBUG Launcher:13 - debug log
+2018-08-18 21:27:00 INFO  Launcher:14 - info log
+2018-08-18 21:27:00 WARN  Launcher:15 - warn log
+2018-08-18 21:27:00 ERROR Launcher:16 - error log
+2018-08-18 21:27:00 FATAL Launcher:17 - fatal log
+2018-08-18 21:27:00 DEBUG LoginScreen:23 - started login screen
+2018-08-18 21:27:04 TRACE LoginScreen:30 - username = admin
+2018-08-18 21:27:06 DEBUG LoginScreen:39 - received users credentials
+2018-08-18 21:27:06 INFO  LoginScreen:44 - User logged in successfully
+2018-08-18 21:27:06 DEBUG AdminScreen:20 - started admin screen
+2018-08-18 21:27:07 INFO  AdminScreen:34 - [test, test2]
+2018-08-18 21:27:09 TRACE AdminScreen:39 - user selected=test
+2018-08-18 21:27:09 INFO  AdminScreen:49 - [1004]
+2018-08-18 21:27:14 TRACE AdminScreen:55 - selected account= 104
+2018-08-18 21:27:14 WARN  AccountDaoJdbc:68 - failed to find account with provided credentials from the db
+2018-08-18 21:27:14 DEBUG AdminScreen:20 - started admin screen
+2018-08-18 21:27:14 INFO  AdminScreen:34 - [test, test2]
+2018-08-18 21:29:10 TRACE Launcher:12 - trace log
+2018-08-18 21:29:10 DEBUG Launcher:13 - debug log
+2018-08-18 21:29:10 INFO  Launcher:14 - info log
+2018-08-18 21:29:10 WARN  Launcher:15 - warn log
+2018-08-18 21:29:10 ERROR Launcher:16 - error log
+2018-08-18 21:29:10 FATAL Launcher:17 - fatal log
+2018-08-18 21:29:10 DEBUG LoginScreen:23 - started login screen
+2018-08-18 21:29:13 TRACE LoginScreen:30 - username = test2
+2018-08-18 21:29:29 DEBUG LoginScreen:39 - received users credentials
+2018-08-18 21:29:29 INFO  LoginScreen:44 - User logged in successfully
+2018-08-18 21:29:29 INFO  LoginScreen:48 - WelcomeUser [username=test2, password=test, firstName=test, lastName=test, admin=0, userAccounts=[]]
+2018-08-18 21:29:29 DEBUG HomeScreen:16 - started home screen
+2018-08-18 21:29:31 DEBUG AccountOptionsScreen:28 - started account options screen
+2018-08-18 21:29:43 TRACE AccountOptionsScreen:50 - retrieved user accounts
+2018-08-18 21:39:04 TRACE Launcher:12 - trace log
+2018-08-18 21:39:04 DEBUG Launcher:13 - debug log
+2018-08-18 21:39:04 INFO  Launcher:14 - info log
+2018-08-18 21:39:04 WARN  Launcher:15 - warn log
+2018-08-18 21:39:04 ERROR Launcher:16 - error log
+2018-08-18 21:39:04 FATAL Launcher:17 - fatal log
+2018-08-18 21:39:04 DEBUG LoginScreen:23 - started login screen
+2018-08-18 21:39:22 TRACE LoginScreen:30 - username = register
+2018-08-18 21:39:27 TRACE UserDaoJdbc:45 - 1 records created
+2018-08-18 21:39:27 DEBUG LoginScreen:23 - started login screen
+2018-08-18 21:39:30 TRACE LoginScreen:30 - username = test
+2018-08-18 21:39:31 DEBUG LoginScreen:39 - received users credentials
+2018-08-18 21:39:31 INFO  LoginScreen:44 - User logged in successfully
+2018-08-18 21:39:31 INFO  LoginScreen:48 - WelcomeUser [username=test, password=test, firstName=test, lastName=test, admin=0, userAccounts=[]]
+2018-08-18 21:39:31 DEBUG HomeScreen:16 - started home screen
+2018-08-18 21:39:34 DEBUG AccountOptionsScreen:28 - started account options screen
+2018-08-18 21:39:36 DEBUG CreateAccountScreen:26 - started create account screen
+2018-08-18 21:39:38 TRACE AccountDaoJdbc:43 - 1 records created in accounts
+2018-08-18 21:39:38 DEBUG CreateAccountScreen:44 - Created account: Account [accountOwners=null, transactionHistory=[2018.08.18.21.39.36 - Account Created], accountType=checking, accountNumber=1002, balance=0.0]
+2018-08-18 21:39:38 TRACE AccountDaoJdbc:184 - 1 records created in account owners
+2018-08-18 21:39:38 DEBUG AccountHomeScreen:23 - started account home screen
+2018-08-18 21:39:44 DEBUG AccountOptionsScreen:28 - started account options screen
+2018-08-18 21:39:46 DEBUG HomeScreen:16 - started home screen
+2018-08-18 21:39:48 DEBUG LoginScreen:23 - started login screen
+2018-08-18 21:39:51 TRACE LoginScreen:30 - username = register
+2018-08-18 21:39:57 TRACE UserDaoJdbc:45 - 1 records created
+2018-08-18 21:39:57 DEBUG LoginScreen:23 - started login screen
+2018-08-18 21:40:01 TRACE LoginScreen:30 - username = test2
+2018-08-18 21:40:03 DEBUG LoginScreen:39 - received users credentials
+2018-08-18 21:40:03 INFO  LoginScreen:44 - User logged in successfully
+2018-08-18 21:40:03 INFO  LoginScreen:48 - WelcomeUser [username=test2, password=test, firstName=test, lastName=test, admin=0, userAccounts=[]]
+2018-08-18 21:40:03 DEBUG HomeScreen:16 - started home screen
+2018-08-18 21:40:04 DEBUG AccountOptionsScreen:28 - started account options screen
+2018-08-18 21:40:06 DEBUG CreateAccountScreen:26 - started create account screen
+2018-08-18 21:40:10 TRACE AccountDaoJdbc:43 - 1 records created in accounts
+2018-08-18 21:40:10 DEBUG CreateAccountScreen:44 - Created account: Account [accountOwners=null, transactionHistory=[2018.08.18.21.40.06 - Account Created], accountType=checking, accountNumber=1003, balance=0.0]
+2018-08-18 21:40:10 TRACE AccountDaoJdbc:184 - 1 records created in account owners
+2018-08-18 21:40:10 DEBUG AccountHomeScreen:23 - started account home screen
+2018-08-18 21:40:17 DEBUG AddAccountOwnerScreen:21 - started add account owner screen
+2018-08-18 21:40:20 TRACE AccountDaoJdbc:184 - 1 records created in account owners
+2018-08-18 21:40:20 DEBUG AccountHomeScreen:23 - started account home screen
+2018-08-18 21:40:26 DEBUG AccountOptionsScreen:28 - started account options screen
+2018-08-18 21:40:28 DEBUG HomeScreen:16 - started home screen
+2018-08-18 21:40:29 DEBUG LoginScreen:23 - started login screen
+2018-08-18 21:40:31 TRACE LoginScreen:30 - username = test
+2018-08-18 21:40:32 DEBUG LoginScreen:39 - received users credentials
+2018-08-18 21:40:32 INFO  LoginScreen:44 - User logged in successfully
+2018-08-18 21:40:32 INFO  LoginScreen:48 - WelcomeUser [username=test, password=test, firstName=test, lastName=test, admin=0, userAccounts=[]]
+2018-08-18 21:40:32 DEBUG HomeScreen:16 - started home screen
+2018-08-18 21:40:34 DEBUG AccountOptionsScreen:28 - started account options screen
+2018-08-18 21:40:36 TRACE AccountOptionsScreen:50 - retrieved user accounts
+2018-08-18 21:40:44 DEBUG AccountOptionsScreen:55 - selected account: Account [accountOwners=null, transactionHistory=[2018.08.18.21.40.44 - Account Created], accountType=checking, accountNumber=1002, balance=0.0]
+2018-08-18 21:40:44 DEBUG AccountHomeScreen:23 - started account home screen
+2018-08-18 21:40:50 DEBUG AccountHomeScreen:23 - started account home screen
+2018-08-18 21:40:54 DEBUG AccountHomeScreen:23 - started account home screen

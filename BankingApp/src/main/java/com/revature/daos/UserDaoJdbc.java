@@ -68,6 +68,7 @@ public class UserDaoJdbc implements UserDao {
 				u.setLastName(rs.getString("LastName"));
 				u.setUsername(rs.getString("Username"));
 				u.setPassword(rs.getString("Password"));
+				u.setAdmin(rs.getInt("admin"));
 				return u;
 			} else {
 				log.warn("failed to find user with provided credentials from the db");
@@ -157,6 +158,24 @@ public class UserDaoJdbc implements UserDao {
 				accountIds.add(i);
 			}
 			return accountIds;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			log.error("failed to find accounts belonging to that user");
+		}
+		return null;
+	}
+
+	@Override
+	public List<String> getAllUsernames() {
+		try (Connection conn = cu.getConnection()) {
+			List<String> usernames = new ArrayList<>();
+			PreparedStatement ps = conn.prepareStatement("SELECT * FROM Users WHERE Username != 'admin'");
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				String username = rs.getString("Username");
+				usernames.add(username);
+			}
+			return usernames;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

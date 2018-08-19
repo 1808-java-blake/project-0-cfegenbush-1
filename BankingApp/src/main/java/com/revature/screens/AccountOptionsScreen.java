@@ -41,11 +41,11 @@ public class AccountOptionsScreen implements Screen {
 			List<Integer> userAccounts = ud.getUserAccounts(currentUser.getUsername());
 			if (userAccounts.size() != 0) {
 				System.out.println("   Account(s): ");
-				userAccounts.stream().forEach((userAccount) -> {
+				for(int userAccount: userAccounts) {
 					Account a = ad.getAccount(userAccount);
 					System.out.printf("   %s - %s", userAccount, a.getAccountType());
 					System.out.println(" ");
-				});
+				}
 
 				log.trace("retrieved user accounts");
 

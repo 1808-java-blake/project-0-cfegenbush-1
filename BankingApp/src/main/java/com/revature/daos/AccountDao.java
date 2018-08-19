@@ -1,6 +1,9 @@
 package main.java.com.revature.daos;
 
+import java.util.List;
+
 import main.java.com.revature.beans.Account;
+import main.java.com.revature.beans.Transaction;
 
 public interface AccountDao {
 
@@ -12,7 +15,7 @@ public interface AccountDao {
 	 * @param a
 	 */
 
-	void createAccount(Account a);
+	void createAccount(Account a, String username);
 
 	Account getAccount(int accountNumber);
 
@@ -27,5 +30,7 @@ public interface AccountDao {
 	void addTransaction(Account currentAccount, Account targetAccount, String transactionType, double amount);
 
 	void addAccountOwner(int currentAccountNumber, String username);
+
+	List<Transaction> getTransactionHistory(int accountNumber);
 
 }

@@ -10,7 +10,8 @@ CREATE TABLE Accounts (
     AccountNumber INTEGER PRIMARY KEY,
     AccountType VARCHAR(10) NOT NULL,
     Balance NUMERIC(10,2),
-    CreationDate TIMESTAMP
+    CreationDate TIMESTAMP,
+    CreatedBy VARCHAR(20) NOT NULL REFERENCES Users(Username)
 );
 
 CREATE TABLE Transactions (

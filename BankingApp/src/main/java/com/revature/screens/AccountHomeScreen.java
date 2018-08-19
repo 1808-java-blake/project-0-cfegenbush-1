@@ -38,20 +38,17 @@ public class AccountHomeScreen implements Screen {
 		String selection = scan.nextLine();
 		switch (selection) {
 		case "1":
-			System.out.println(" Enter 1 to make a deposit");
 			return new DepositScreen();
 		case "2":
-			System.out.println(" Enter 2 to make a withdrawal");
 			return new WithdrawalScreen();
 		case "3":
 			double accountBalance = ad.getAccount(currentAccount.getAccountNumber()).getBalance();
-			System.out.println(" Enter 3 to view account balance");
 			System.out.println("$" + accountBalance);
 			break;
 		case "4":
 			System.out.println(" Transaction History:");
-			for (int i = 0; i < currentAccount.getTransactionHistory().size(); i++) {
-				System.out.println(currentAccount.getTransactionHistory().get(i));
+			for (int i = 0; i < ad.getTransactionHistory(currentAccount.getAccountNumber()).size(); i++) {
+				System.out.println(ad.getTransactionHistory(currentAccount.getAccountNumber()).get(i).toString());
 			}
 			break;
 		case "5":

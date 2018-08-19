@@ -42,7 +42,7 @@ public class LoginScreen implements Screen {
 		if (currentUser != null) {
 			state.setCurrentUser(currentUser);
 			log.info("User logged in successfully");
-			if ("admin".equals(currentUser.getUsername())) {
+			if (1 == currentUser.getAdmin()) {
 				return new AdminScreen();
 			} else {
 				log.info("Welcome" + currentUser);

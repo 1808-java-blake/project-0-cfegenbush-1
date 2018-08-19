@@ -11,6 +11,7 @@ public class User {
 	private String password;
 	private String firstName;
 	private String lastName;
+	private int admin;
 	private ArrayList<Integer> userAccounts = new ArrayList<Integer>();
 
 	public User() {
@@ -50,18 +51,27 @@ public class User {
 		this.lastName = lastName;
 	}
 
+	public int getAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(int admin) {
+		this.admin = admin;
+	}
+
 	public ArrayList<Integer> getUserAccounts() {
 		return userAccounts;
 	}
 
-	public void setUserAccounts(int accountNumber) {
-		this.userAccounts.add(accountNumber);
+	public void setUserAccounts(ArrayList<Integer> userAccounts) {
+		this.userAccounts = userAccounts;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + admin;
 		result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
 		result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
 		result = prime * result + ((password == null) ? 0 : password.hashCode());
@@ -79,6 +89,8 @@ public class User {
 		if (getClass() != obj.getClass())
 			return false;
 		User other = (User) obj;
+		if (admin != other.admin)
+			return false;
 		if (firstName == null) {
 			if (other.firstName != null)
 				return false;
@@ -110,7 +122,9 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [username=" + username + ", password=" + password + ", firstName=" + firstName + ", lastName="
-				+ lastName + ", userAccounts=" + userAccounts + "]";
+				+ lastName + ", admin=" + admin + ", userAccounts=" + userAccounts + "]";
 	}
+
+	
 
 }

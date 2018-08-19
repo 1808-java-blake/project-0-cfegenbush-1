@@ -4,12 +4,13 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Types;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 
 import main.java.com.revature.beans.Account;
-
+import main.java.com.revature.beans.Transaction;
 import main.java.com.revature.util.ConnectionUtil;
 
 public class AccountDaoJdbc implements AccountDao {
@@ -27,15 +28,16 @@ public class AccountDaoJdbc implements AccountDao {
 	}
 
 	@Override
-	public void createAccount(Account a) {
+	public void createAccount(Account a, String username) {
 		try (Connection conn = cu.getConnection()) {
 			PreparedStatement ps = conn
-					.prepareStatement("INSERT INTO Accounts (AccountNumber, AccountType, Balance, CreationDate) VALUES"
-							+ " (?, ?, ?, CURRENT_TIMESTAMP)");
+					.prepareStatement("INSERT INTO Accounts (AccountNumber, AccountType, Balance, CreationDate, CreatedBy) VALUES"
+							+ " (?, ?, ?, CURRENT_TIMESTAMP, ?)");
 
 			ps.setInt(1, a.getAccountNumber());
 			ps.setString(2, a.getAccountType());
 			ps.setDouble(3, a.getBalance());
+			ps.setString(4, username);
 
 			int recordsCreated = ps.executeUpdate();
 			log.trace(recordsCreated + " records created in accounts");
@@ -154,7 +156,7 @@ public class AccountDaoJdbc implements AccountDao {
 				log.debug("wire transfer");
 				ps.setInt(3, targetAccount.getAccountNumber());
 			} else {
-				ps.setNull(3, Types.INTEGER);
+				ps.setInt(3, currentAccount.getAccountNumber());
 			}
 
 			int recordsCreated = ps.executeUpdate();
@@ -173,10 +175,11 @@ public class AccountDaoJdbc implements AccountDao {
 	@Override
 	public void addAccountOwner(int currentAccountNumber, String username) {
 		try (Connection conn = cu.getConnection()) {
-			PreparedStatement ps = conn.prepareStatement("INSERT INTO AccountOwners (Username, AccountID) VALUES (?, ?)");
+			PreparedStatement ps = conn
+					.prepareStatement("INSERT INTO AccountOwners (Username, AccountID) VALUES (?, ?)");
 			ps.setString(1, username);
 			ps.setInt(2, currentAccountNumber);
-			
+
 			int recordsCreated = ps.executeUpdate();
 			log.trace(recordsCreated + " records created in account owners");
 		} catch (SQLException e) {
@@ -187,7 +190,32 @@ public class AccountDaoJdbc implements AccountDao {
 			}
 			log.warn("failed to create new account owner");
 		}
-		
+
+	}
+
+	@Override
+	public List<Transaction> getTransactionHistory(int accountNumber) {
+		try (Connection conn = cu.getConnection()) {
+			PreparedStatement ps = conn
+					.prepareStatement("SELECT * FROM Transactions WHERE AccountID = ? ORDER BY date");
+			List<Transaction> transactionHistory = new ArrayList<>();
+			ps.setInt(1, accountNumber);
+			ResultSet rs = ps.executeQuery();
+			while (rs.next()) {
+				Transaction transaction = new Transaction();
+				transaction.setTransactionType(rs.getString("TransactionType"));
+				transaction.setAmount(rs.getDouble("Amount"));
+				transaction.setDate(rs.getDate("Date").toString());
+				transaction.setAccountTransferredTo(rs.getInt("AccountTransferredTo"));
+				transaction.setAccountId(rs.getInt("AccountID"));
+				transactionHistory.add(transaction);
+			}
+			return transactionHistory;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
 	}
 
 }

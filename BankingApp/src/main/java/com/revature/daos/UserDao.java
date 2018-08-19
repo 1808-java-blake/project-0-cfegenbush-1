@@ -25,5 +25,7 @@ public interface UserDao {
 	String verifyUserExistsForAccountSharing(String username);
 
 	List<Integer> getUserAccounts(String username);
+	
+	List<String> getAllUsernames();
 
 }
