@@ -1,5 +1,6 @@
 package main.java.com.revature.screens;
 
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -41,15 +42,24 @@ public class AccountOptionsScreen implements Screen {
 			List<Integer> userAccounts = ud.getUserAccounts(currentUser.getUsername());
 			if (userAccounts.size() != 0) {
 				System.out.println("   Account(s): ");
-				for(int userAccount: userAccounts) {
+				for (int userAccount : userAccounts) {
 					Account a = ad.getAccount(userAccount);
 					System.out.printf("   %s - %s", userAccount, a.getAccountType());
 					System.out.println(" ");
 				}
 
 				log.trace("retrieved user accounts");
+				int selectedAccount;
+				try {
+					selectedAccount = scan.nextInt();
+					log.trace("selected account= " + selectedAccount);
+				} catch (InputMismatchException e) {
+					System.out.println(" Please enter a valid account number. ");
+					return new AccountOptionsScreen();
+				} finally {
+					scan.nextLine();
+				}
 
-				int selectedAccount = scan.nextInt();
 				if (userAccounts.contains(selectedAccount)) {
 					state.setCurrentAccount(ad.getAccount(selectedAccount));
 					log.debug("selected account: " + state.getCurrentAccount());

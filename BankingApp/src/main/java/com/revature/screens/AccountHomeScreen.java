@@ -1,10 +1,14 @@
 package main.java.com.revature.screens;
 
+import java.io.IOException;
+import java.text.NumberFormat;
+import java.util.List;
 import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
 import main.java.com.revature.beans.Account;
+import main.java.com.revature.beans.Transaction;
 import main.java.com.revature.daos.AccountDao;
 import main.java.com.revature.util.AppState;
 
@@ -13,6 +17,7 @@ public class AccountHomeScreen implements Screen {
 	private AccountDao ad = AccountDao.currentAccountDao;
 	private Account currentAccount = AppState.state.getCurrentAccount();
 	private Logger log = Logger.getRootLogger();
+	NumberFormat formatter = NumberFormat.getCurrencyInstance();
 
 	@Override
 	public Screen start() {
@@ -21,6 +26,7 @@ public class AccountHomeScreen implements Screen {
 		 * funds, add account owner making the account sharable
 		 */
 		log.debug("started account home screen");
+		System.out.println(" ");
 		System.out.println("***************************************************");
 		System.out.println("*                    ACCOUNT                      *");
 		System.out.println("***************************************************");
@@ -43,12 +49,37 @@ public class AccountHomeScreen implements Screen {
 			return new WithdrawalScreen();
 		case "3":
 			double accountBalance = ad.getAccount(currentAccount.getAccountNumber()).getBalance();
-			System.out.println("$" + accountBalance);
+			System.out.println(" ");
+			System.out.println("  " + formatter.format(accountBalance));
+			try {
+				System.out.println(" ");
+				System.out.println(" Press Enter to continue ");
+				System.in.read();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 			break;
 		case "4":
 			System.out.println(" Transaction History:");
-			for (int i = 0; i < ad.getTransactionHistory(currentAccount.getAccountNumber()).size(); i++) {
-				System.out.println(ad.getTransactionHistory(currentAccount.getAccountNumber()).get(i).toString());
+			List<Transaction> transactionHistory = ad.getTransactionHistory(currentAccount.getAccountNumber());
+			if (transactionHistory.size() == 0) {
+				System.out.println(" No transactions have been made.");
+			} else {
+				for (int i = 0; i < transactionHistory.size(); i++) {
+					int target = transactionHistory.get(i).getIncomingAccount();
+					if (target != 0) {
+						System.out.println(transactionHistory.get(i).toString() + " | Target Account: " + target);
+					} else {
+						System.out.println(transactionHistory.get(i).toString());
+					}
+				}
+			}
+			try {
+				System.out.println(" ");
+				System.out.println(" Press Enter to continue ");
+				System.in.read();
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
 			break;
 		case "5":

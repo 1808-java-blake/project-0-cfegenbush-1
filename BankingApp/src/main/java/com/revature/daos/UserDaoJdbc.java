@@ -82,7 +82,7 @@ public class UserDaoJdbc implements UserDao {
 	}
 
 	@Override
-	public void updateUser(User u) {
+	public void updateUser(User u, String currentUsername) {
 		try (Connection conn = cu.getConnection()) {
 			PreparedStatement ps = conn.prepareStatement(
 					"UPDATE Users SET Username=?, Password=?, FirstName=?, LastName=?" + " WHERE Username = ?");
@@ -90,7 +90,7 @@ public class UserDaoJdbc implements UserDao {
 			ps.setString(2, u.getPassword());
 			ps.setString(3, u.getFirstName());
 			ps.setString(4, u.getLastName());
-			ps.setString(5, u.getUsername());
+			ps.setString(5, currentUsername);
 
 			int result = ps.executeUpdate();
 			log.trace(result + " user updated");

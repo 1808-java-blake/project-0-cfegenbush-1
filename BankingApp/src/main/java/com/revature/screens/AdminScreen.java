@@ -1,19 +1,21 @@
 package main.java.com.revature.screens;
 
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
 import org.apache.log4j.Logger;
 
 import main.java.com.revature.beans.Account;
+import main.java.com.revature.beans.Transaction;
 import main.java.com.revature.daos.AccountDao;
 import main.java.com.revature.daos.UserDao;
 
 public class AdminScreen implements Screen {
-	Scanner scan = new Scanner(System.in);
-	AccountDao ad = AccountDao.currentAccountDao;
-	UserDao ud = UserDao.currentUserDao;
-	Logger log = Logger.getRootLogger();
+	private Scanner scan = new Scanner(System.in);
+	private AccountDao ad = AccountDao.currentAccountDao;
+	private UserDao ud = UserDao.currentUserDao;
+	private Logger log = Logger.getRootLogger();
 
 	@Override
 	public Screen start() {
@@ -24,6 +26,7 @@ public class AdminScreen implements Screen {
 		 * transaction history
 		 */
 		Account a = new Account();
+		System.out.println(" ");
 		System.out.println("***************************************************");
 		System.out.println("*                      ADMIN                      *");
 		System.out.println("***************************************************");
@@ -47,32 +50,50 @@ public class AdminScreen implements Screen {
 
 		List<Integer> userAccounts = ud.getUserAccounts(userSelection);
 		log.info(userAccounts);
+
 		for (int i = 0; i < userAccounts.size(); i++) {
 			System.out.println(userAccounts.get(i));
 		}
 
-		int accountSelection = scan.nextInt();
-		log.trace("selected account= " + accountSelection);
+		int accountSelection;
+		try {
+			accountSelection = scan.nextInt();
+			log.trace("selected account= " + accountSelection);
+		} catch (InputMismatchException e) {
+			System.out.println(" Please enter a valid account number. ");
+			return new AdminScreen();
+		} finally {
+			scan.nextLine();
+		}
 
 		a = ad.getAccount(accountSelection);
-
 		if (a == null) {
 			System.out.println("Failed to find account for the number provided. Please try again.");
 			return new AdminScreen();
 		}
 
-		for (int i = 0; i < ad.getTransactionHistory(a.getAccountNumber()).size(); i++) {
-			System.out.println(ad.getTransactionHistory(a.getAccountNumber()).get(i).toString());
-		}
+		List<Transaction> transactionHistory = ad.getTransactionHistory(a.getAccountNumber());
+		if (transactionHistory.size() == 0) {
+			System.out.println(" This account has not made any transactions. ");
 
+		} else {
+			for (int i = 0; i < transactionHistory.size(); i++) {
+				int target = transactionHistory.get(i).getIncomingAccount();
+				if (target != 0) {
+					System.out.println(transactionHistory.get(i).toString() + " | Target Account: " + target);
+				} else {
+					System.out.println(transactionHistory.get(i).toString());
+				}
+			}
+		}
 		log.debug("retrieved account transaction history");
 
 		System.out.println(" ");
-		System.out.println("Enter 1 to restart");
-		System.out.println("Enter 2 to log out");
-		int exit = scan.nextInt();
+		System.out.println(" Enter 1 to restart");
+		System.out.println(" Enter 2 to log out");
+		String exit = scan.nextLine();
 
-		if (2 == exit) {
+		if ("2".equals(exit)) {
 			return new LoginScreen();
 		} else {
 			return new AdminScreen();

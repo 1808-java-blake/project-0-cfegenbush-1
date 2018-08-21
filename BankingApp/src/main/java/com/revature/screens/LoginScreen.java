@@ -22,7 +22,7 @@ public class LoginScreen implements Screen {
 		 */
 		log.debug("started login screen");
 		System.out.println("***************************************************");
-		System.out.println("*               ELECTRONIC BANKING                *");
+		System.out.println("*                  THE RED BANK                   *");
 		System.out.println("***************************************************");
 		System.out.println(" ");
 		System.out.print(" Enter username or type 'Register' to sign up:   ");
@@ -49,8 +49,9 @@ public class LoginScreen implements Screen {
 				return new HomeScreen();
 			}
 		}
-
-		System.out.println("Unable to login");
+		
+		System.out.println(" ");
+		System.out.println(" Incorrect Username or Password.");
 		return new LoginScreen();
 	}
 

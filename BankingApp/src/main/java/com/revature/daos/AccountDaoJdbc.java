@@ -30,8 +30,8 @@ public class AccountDaoJdbc implements AccountDao {
 	@Override
 	public void createAccount(Account a, String username) {
 		try (Connection conn = cu.getConnection()) {
-			PreparedStatement ps = conn
-					.prepareStatement("INSERT INTO Accounts (AccountNumber, AccountType, Balance, CreationDate, CreatedBy) VALUES"
+			PreparedStatement ps = conn.prepareStatement(
+					"INSERT INTO Accounts (AccountNumber, AccountType, Balance, CreationDate, CreatedBy) VALUES"
 							+ " (?, ?, ?, CURRENT_TIMESTAMP, ?)");
 
 			ps.setInt(1, a.getAccountNumber());
@@ -121,11 +121,6 @@ public class AccountDaoJdbc implements AccountDao {
 	}
 
 	@Override
-	public void updateAccount(Account a) {
-
-	}
-
-	@Override
 	public void deleteAccount(int accountNumber) {
 		try (Connection conn = cu.getConnection()) {
 			PreparedStatement ps = conn.prepareStatement("DELETE FROM Accounts WHERE AccountNumber=?");
@@ -144,20 +139,38 @@ public class AccountDaoJdbc implements AccountDao {
 	}
 
 	@Override
-	public void addTransaction(Account currentAccount, Account targetAccount, String transactionType, double amount) {
+	public void addTransaction(Account currentAccount, String transactionType, double amount) {
 		try (Connection conn = cu.getConnection()) {
-			PreparedStatement ps = conn.prepareStatement(
-					"INSERT INTO Transactions (TransactionType, Amount, Date, AccountTransferredTo, AccountID) "
+			PreparedStatement ps = conn
+					.prepareStatement("INSERT INTO Transactions (TransactionType, Amount, Date, OutgoingAccount) "
+							+ "VALUES (?, ?, CURRENT_TIMESTAMP, ?)");
+			ps.setString(1, transactionType);
+			ps.setDouble(2, amount);
+			ps.setInt(3, currentAccount.getAccountNumber());
+
+			int recordsCreated = ps.executeUpdate();
+			log.trace(recordsCreated + " records created in transactions");
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			log.error(e.getMessage());
+			for (StackTraceElement ste : e.getStackTrace()) {
+				log.error(ste);
+			}
+			log.warn("failed to create new transaction");
+		}
+
+	}
+
+	@Override
+	public void addWireTransferTransaction(Account outgoingAccount, Account incomingAccount, double amount, String transactionType) {
+		try (Connection conn = cu.getConnection()) {
+			PreparedStatement ps = conn
+					.prepareStatement("INSERT INTO Transactions (TransactionType, Amount, Date, OutgoingAccount, IncomingAccount) "
 							+ "VALUES (?, ?, CURRENT_TIMESTAMP, ?, ?)");
 			ps.setString(1, transactionType);
 			ps.setDouble(2, amount);
-			ps.setInt(4, currentAccount.getAccountNumber());
-			if (currentAccount != targetAccount) {
-				log.debug("wire transfer");
-				ps.setInt(3, targetAccount.getAccountNumber());
-			} else {
-				ps.setInt(3, currentAccount.getAccountNumber());
-			}
+			ps.setInt(3, outgoingAccount.getAccountNumber());
+			ps.setInt(4, incomingAccount.getAccountNumber());
 
 			int recordsCreated = ps.executeUpdate();
 			log.trace(recordsCreated + " records created in transactions");
@@ -195,19 +208,21 @@ public class AccountDaoJdbc implements AccountDao {
 
 	@Override
 	public List<Transaction> getTransactionHistory(int accountNumber) {
+		
 		try (Connection conn = cu.getConnection()) {
 			PreparedStatement ps = conn
-					.prepareStatement("SELECT * FROM Transactions WHERE AccountID = ? ORDER BY date");
+					.prepareStatement("SELECT * FROM Transactions WHERE OutgoingAccount = ? OR IncomingAccount = ? ORDER BY date");
 			List<Transaction> transactionHistory = new ArrayList<>();
 			ps.setInt(1, accountNumber);
+			ps.setInt(2, accountNumber);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				Transaction transaction = new Transaction();
 				transaction.setTransactionType(rs.getString("TransactionType"));
 				transaction.setAmount(rs.getDouble("Amount"));
 				transaction.setDate(rs.getDate("Date").toString());
-				transaction.setAccountTransferredTo(rs.getInt("AccountTransferredTo"));
-				transaction.setAccountId(rs.getInt("AccountID"));
+				transaction.setIncomingAccount(rs.getInt("IncomingAccount"));
+				transaction.setOutgoingAccount(rs.getInt("OutgoingAccount"));
 				transactionHistory.add(transaction);
 			}
 			return transactionHistory;

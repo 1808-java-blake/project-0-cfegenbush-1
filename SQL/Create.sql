@@ -16,11 +16,11 @@ CREATE TABLE Accounts (
 
 CREATE TABLE Transactions (
     TransactionID SERIAL PRIMARY KEY,
-    TransactionType VARCHAR(20) NOT NULL,
+    TransactionType VARCHAR(30) NOT NULL,
     Amount NUMERIC(10,2) NOT NULL,
     Date TIMESTAMP NOT NULL,
-    AccountTransferredTo INTEGER,
-    AccountID INTEGER REFERENCES Accounts(AccountNumber) ON DELETE CASCADE
+    IncomingAccount INTEGER,
+    OutgoingAccount INTEGER REFERENCES Accounts(AccountNumber) ON DELETE CASCADE
 );
 
 CREATE TABLE AccountOwners (

@@ -15,20 +15,27 @@ public class WireFundsScreen implements Screen {
 
 	@Override
 	public Screen start() {
+		System.out.println(" ");
 		System.out.println("***************************************************");
 		System.out.println("*                    WIRE FUNDS                   *");
 		System.out.println("***************************************************");
 		System.out.println(" ");
-		System.out.print(" Enter the account number:  ");
+		System.out.print(" Enter the target account number:  ");
 		int accountNumber = scan.nextInt();
 
 		try {
 			targetAccount = ad.getAccount(accountNumber);
-			System.out.println(" Enter the amount to transfer: $ ");
-			int amountToTransfer = scan.nextInt();
+			System.out.println(" Enter the amount to transfer: ");
+			System.out.print("$  ");
+			double amountToTransfer = scan.nextInt();
+			if (currentAccount.getBalance() - amountToTransfer < 0) {
+				System.out.println(" ");
+				System.out.println("  Insufficient Funds.");
+				return new AccountHomeScreen();
+			}
 			ad.makeWithdrawal(currentAccount, amountToTransfer);
 			ad.makeDeposit(targetAccount, amountToTransfer);
-			ad.addTransaction(currentAccount, targetAccount, "Wire Transfer", amountToTransfer);
+			ad.addWireTransferTransaction(currentAccount, targetAccount, amountToTransfer, "Wire Transfer");
 			return new AccountHomeScreen();
 		} catch (Exception e) {
 			System.out.println(" Account number is incorrect or does not exist");

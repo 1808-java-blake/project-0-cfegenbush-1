@@ -23,11 +23,11 @@ public interface AccountDao {
 
 	void makeWithdrawal(Account a, double amountToWithdraw); // throws insufficient funds exception
 
-	void updateAccount(Account a);
-
 	void deleteAccount(int accountNumber);
 
-	void addTransaction(Account currentAccount, Account targetAccount, String transactionType, double amount);
+	void addTransaction(Account currentAccount, String transactionType, double amount);
+
+	void addWireTransferTransaction(Account outgoingAccount, Account incomingAccount, double amount, String transactionType);
 
 	void addAccountOwner(int currentAccountNumber, String username);
 

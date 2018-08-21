@@ -18,7 +18,7 @@ public interface UserDao {
 
 	User findByUsernameAndPassword(String username, String password); // throws User does not exist exception
 
-	void updateUser(User u);
+	void updateUser(User u, String currentUsername);
 
 	void deleteUser(User u);
 

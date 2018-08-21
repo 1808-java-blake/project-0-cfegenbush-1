@@ -22,6 +22,7 @@ public class CreateAccountScreen implements Screen {
 		 */
 		log.debug("started create account screen");
 		Account a = new Account();
+		System.out.println(" ");
 		System.out.println("***************************************************");
 		System.out.println("*                 CREATE ACCOUNT                  *");
 		System.out.println("***************************************************");

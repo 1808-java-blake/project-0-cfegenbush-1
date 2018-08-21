@@ -19,6 +19,7 @@ public class AddAccountOwnerScreen implements Screen {
 	@Override
 	public Screen start() {
 		log.debug("started add account owner screen");
+		System.out.println(" ");
 		System.out.println("***************************************************");
 		System.out.println("*                  SHARE ACCOUNT                  *");
 		System.out.println("***************************************************");

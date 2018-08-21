@@ -17,14 +17,21 @@ public class WithdrawalScreen implements Screen {
 	@Override
 	public Screen start() {
 		log.debug("started withdrawal screen");
+		System.out.println(" ");
 		System.out.println("***************************************************");
 		System.out.println("*                    WITHDRAWALS                  *");
 		System.out.println("***************************************************");
 		System.out.println(" ");
-		System.out.println("   Enter Withdrawal Amount: $");
+		System.out.println("   Enter Withdrawal Amount: ");
+		System.out.print("$  ");
 		double amountToWithdraw = scan.nextDouble();
+		if (currentAccount.getBalance() - amountToWithdraw < 0) {
+			System.out.println(" ");
+			System.out.println(" Insufficient Funds.");
+			return this;
+		}
 		ad.makeWithdrawal(currentAccount, amountToWithdraw);
-		ad.addTransaction(currentAccount, currentAccount, "Withdrawal", amountToWithdraw);
+		ad.addTransaction(currentAccount, "Withdrawal", amountToWithdraw);
 		return new AccountHomeScreen();
 	}
 

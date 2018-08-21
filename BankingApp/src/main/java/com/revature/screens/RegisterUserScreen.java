@@ -16,6 +16,7 @@ public class RegisterUserScreen implements Screen {
 		/*
 		 * creates a user and stores in a .txt file
 		 */
+		System.out.println(" ");
 		System.out.println("***************************************************");
 		System.out.println("*               REGISTER NEW USER                 *");
 		System.out.println("***************************************************");

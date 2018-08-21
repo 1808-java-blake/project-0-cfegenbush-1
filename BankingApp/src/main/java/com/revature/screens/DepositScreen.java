@@ -17,14 +17,16 @@ public class DepositScreen implements Screen {
 	@Override
 	public Screen start() {
 		log.debug("started deposit screen");
+		System.out.println(" ");
 		System.out.println("***************************************************");
 		System.out.println("*                     DEPOSITS                    *");
 		System.out.println("***************************************************");
 		System.out.println(" ");
-		System.out.println("   Enter Deposit Amount: $");
+		System.out.println("   Enter Deposit Amount: ");
+		System.out.print("$  ");
 		double amountToDeposit = scan.nextDouble();
 		ad.makeDeposit(currentAccount, amountToDeposit);
-		ad.addTransaction(currentAccount, currentAccount, "Deposit", amountToDeposit);
+		ad.addTransaction(currentAccount, "Deposit", amountToDeposit);
 		return new AccountHomeScreen();
 	}
 
